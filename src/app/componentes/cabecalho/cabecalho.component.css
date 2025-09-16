@@ -1,0 +1,19 @@
+.banner2 {
+    background-color: #003366;
+    height: 100px;
+   
+}
+
+.banner2 img {
+    width: 150px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.ban {
+    display: flex;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
