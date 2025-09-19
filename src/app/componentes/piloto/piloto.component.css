@@ -70,7 +70,7 @@ section {
     align-items: center;
   }
 
-  /*Estilo da imagem e favoritar*/
+  /*Estilo da imagem e favoritar
 
   section .imagem {
     margin-top: 32px;
@@ -96,4 +96,11 @@ section {
     opacity: 0.8;
     transform: scale(1.1);
     transition: transform 0.2s ease, opacity 0.2s ease;
-  }
+  }*/
+
+  /*Foto Max Verstappen e Lando Norris
+
+  https://pbs.twimg.com/media/Gp3L7baXwAAq2sO?format=jpg&name=large
+  https://mclaren.bloomreach.io/cdn-cgi/image/format=webp,quality=80/delivery/resources/content/gallery/mclaren-racing/formula-1/2025/nsr/f1-75-live-m/web/2025_lando_team_pic_02.jpg 
+  https://cdn-image.as-web.jp/2019/03/14135344/5_XPB_977373_HiRes.jpg
+  */

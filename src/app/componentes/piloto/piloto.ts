@@ -3,5 +3,11 @@ export interface Piloto {
     autoria: string;
     imagem: string;
     favorito: boolean;
-    colocacao: string;
+    colocacao: ColocacaoCamp;
+}
+
+export interface ColocacaoCamp {
+    id: string;
+    value: string;
+    pilotos: Piloto[]
 }
