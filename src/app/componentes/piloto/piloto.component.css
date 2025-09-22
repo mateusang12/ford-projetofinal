@@ -1,6 +1,5 @@
 /* Estrutura de card dos pilotos*/
 section {
-    width: 262px;
     min-height: 382px;
     margin: 8px;
     display: flex;
@@ -12,8 +11,7 @@ section {
     overflow: hidden;
     padding-top: 16px;
     box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
-    margin-left: 64px;
-    margin-top: 100px;
+
   }
   
   section .info-piloto {
@@ -47,13 +45,14 @@ section {
   }
 
   .figura {
+    height: 300px;
     width: 100%;
-    height: auto;
     display: block;
+    object-fit: cover;
   }
 
   .card {
-    width: 250px;
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
@@ -64,13 +63,23 @@ section {
   .info-piloto {
     padding: 15px;
     text-align: center;
+    max-height: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  /*Estilo da imagem e favoritar*/
+  .container-pilotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+
+
+  /*Estilo da imagem e favoritar
 
   section .imagem {
     margin-top: 32px;
@@ -96,4 +105,4 @@ section {
     opacity: 0.8;
     transform: scale(1.1);
     transition: transform 0.2s ease, opacity 0.2s ease;
-  }
+  } */
