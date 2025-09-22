@@ -1,11 +1,13 @@
+
 <div class="container-pilotos">
 <section *ngFor="let piloto of pilotos">
+<section>
     <div class="card">
         <img [src]="piloto.imagem" [alt]="piloto.titulo" class="figura">
     </div>
     <div class="info-piloto">
-        <h2 class="texto-h2">{{ piloto.titulo.toUpperCase() }}</h2>
-        <h3 class="texto-h3">{{ piloto.autoria }}</h3>
+        <h2 class="texto-h2">{{ piloto().titulo.toUpperCase() }}</h2>
+        <h3 class="texto-h3">{{ piloto().autoria }}</h3>
     </div>
 </section>
 </div>
