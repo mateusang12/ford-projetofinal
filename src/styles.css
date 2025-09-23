@@ -66,3 +66,36 @@ table {
 	display: block;
 	margin: 0 auto;
   }
+
+  body {
+	overflow-x: hidden;
+	box-sizing: border-box;
+	padding-top: 90px; /* Use a altura do seu cabeçalho aqui */
+  }
+  
+ 
+  /* Opcional: Garanta que o cabeçalho fique no topo */
+  app-cabecalho {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000; /* Garante que o cabeçalho fique sobre o conteúdo */
+  }
+
+  /* src/app/styles.css ou no seu componente de pilotos */
+
+@media (max-width: 768px) {
+	/* Regras que se aplicam em telas de até 768px de largura */
+	
+	.container-pilotos {
+	  /* Em telas pequenas, alinhe os cards de uma forma diferente */
+	  flex-direction: column;
+	  align-items: center;
+	}
+	
+	.piloto-card {
+	  /* Ajuste a largura para que o card ocupe a maior parte da tela */
+	  width: 90%;
+	}
+  }

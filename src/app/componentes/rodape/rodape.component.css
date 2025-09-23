@@ -1,11 +1,21 @@
 .ban-rod img {
     width: 100px;
     height: auto;
-    margin-left: 35%;
+    
 }
 
 .banner-rodape {
     background-color: #100A49;
+    width: 100%;
+    height: auto;
+}
+
+.banner-rodape .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
 }
 
 .ban-rod {
@@ -13,6 +23,9 @@
     align-items: center;
     color: white;
     gap: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
 }
 
 .realizacao {

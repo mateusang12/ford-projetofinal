@@ -3,6 +3,8 @@ import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component'
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { PilotoComponent } from './componentes/piloto/piloto.component';
 import { ListaPilotosComponent } from './componentes/lista-pilotos/lista-pilotos.component';
+import { CarrosselComponent } from './componentes/carrossel/carrossel.component';
+import { ApoiadoresComponent } from './componentes/apoiadores/apoiadores.component';
 
 
 @Component({
@@ -11,7 +13,9 @@ import { ListaPilotosComponent } from './componentes/lista-pilotos/lista-pilotos
     CabecalhoComponent,
     RodapeComponent,
     PilotoComponent,
-    ListaPilotosComponent
+    ListaPilotosComponent,
+    CarrosselComponent,
+    ApoiadoresComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

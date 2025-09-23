@@ -1,0 +1,6 @@
+<div class="carrossel-container">
+    <img *ngFor="let imagem of imagens; let i = index" 
+         [src]="imagem" 
+         [class.visivel]="i === indexAtual"
+         alt="Imagem do Carrossel">
+  </div>

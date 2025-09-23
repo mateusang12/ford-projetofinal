@@ -1,0 +1,68 @@
+/* src/app/componentes/apoiadores/apoiadores.component.css */
+
+.apoiadores-container {
+  background-color: #000; /* Fundo preto */
+  padding: 40px 0; /* Espaçamento interno */
+  width: 100%;
+  text-align: center; /* Centraliza o texto (como o h2) dentro do container */
+}
+
+.titulo-apoiadores {
+  color: wheat; /* Cor do texto branco */
+  font-family: var(--font-sanserif);
+  font-size: 2em; /* Tamanho da fonte, ajuste se precisar */
+  margin-bottom: 30px; /* Espaçamento abaixo do título e acima das imagens */
+}
+
+.apoiadores-imagens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.apoiadores-imagens img {
+  height: 50px;
+  width: auto;
+}
+
+.ford-container {
+  display: flex; /* Habilita o flexbox */
+  flex-direction: column; /* Alinha os itens verticalmente (em coluna) */
+  align-items: center; /* Centraliza os itens na horizontal */
+}
+
+.logo-ford {
+  /* Ajuste o tamanho da logo se precisar */
+  height: 50px; 
+}
+
+.ford-texto {
+  /* Estilos para o texto "Philanthropy" */
+  color: #fff; /* ou a cor que você precisar */
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  
+}
+
+.rede-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 0px; /* Adiciona espaço entre as imagens e o texto */
+  color: white;
+  gap: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.logosenai {
+  max-width: 130px;
+}
+
+
+
+

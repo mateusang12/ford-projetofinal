@@ -2,7 +2,7 @@
     color: #100A49;
     font-weight: bold;
     font-family: var(--font-montserrat);
-    margin-top: 120px;
+    margin-top: 200px;
 }
 
 .linha-destaque--grande {
@@ -18,3 +18,18 @@
   https://mclaren.bloomreach.io/cdn-cgi/image/format=webp,quality=80/delivery/resources/content/gallery/mclaren-racing/formula-1/2025/nsr/f1-75-live-m/web/2025_lando_team_pic_02.jpg 
   https://cdn-image.as-web.jp/2019/03/14135344/5_XPB_977373_HiRes.jpg
   */
+
+  .container-pilotos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards de pilotos se quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os cards quando houver espaço */
+    gap: 20px; /* Adiciona um espaço entre os cards */
+  }
+
+  /* src/app/componentes/lista-pilotos/lista-pilotos.component.css */
+
+.piloto-card {
+  /* ... outros estilos ... */
+  position: relative;
+  z-index: 1; /* Defina uma camada menor para os cards de pilotos */
+}
