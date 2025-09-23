@@ -2,7 +2,13 @@
     color: #100A49;
     font-weight: bold;
     font-family: var(--font-montserrat);
-    margin-top: 150px;
+    margin-top: 120px;
+}
+
+.linha-destaque--grande {
+  width: 600px;
+  border-bottom: 4px solid;
+  color: #100A49;
 }
 
 /*
