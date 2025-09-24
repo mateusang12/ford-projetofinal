@@ -2,7 +2,8 @@
     color: #100A49;
     font-weight: bold;
     font-family: var(--font-montserrat);
-    margin-top: 200px;
+    margin-top: 50px;
+  
 }
 
 .linha-destaque--grande {
@@ -33,3 +34,4 @@
   position: relative;
   z-index: 1; /* Defina uma camada menor para os cards de pilotos */
 }
+

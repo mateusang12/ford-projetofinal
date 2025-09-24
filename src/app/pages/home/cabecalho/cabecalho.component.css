@@ -1,0 +1,86 @@
+/* src/app/componentes/cabecalho/cabecalho.component.css */
+
+.banner {
+    background-color: #100A49;
+    height: 100px; /* Isso pode ser ajustado para 'auto' se o conteúdo empilhar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* Adicione estas propriedades para o layout padrão (desktop) */
+    display: flex;
+    align-items: center; /* Alinha o conteúdo (o .ban) verticalmente */
+}
+
+.ban {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre a imagem e o bloco de texto */
+    color: white;
+    padding-left: 30px; /* Usa padding em vez de margin-left na imagem */
+    /* Remova as margens fixas se houverem, use padding */
+}
+
+.banner img {
+    /* Remova o margin-left fixo para centralização no mobile */
+    width: 150px;
+    height: 100px;
+}
+
+.titulo-ingressos a {
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    padding-left: 50%;
+    
+}
+
+.texto-header h1, 
+.texto-header p, 
+.texto-header span {
+    /* Garante que o texto se comporte como um bloco para quebrar a linha naturalmente */
+    display: block; 
+    white-space: normal; /* Garante que o texto quebre e não fique em uma linha só */
+    line-height: 1.2; /* Ajuda na legibilidade após a quebra */
+    margin: 0; /* Remove margens padrão que possam atrapalhar o alinhamento */
+}
+
+/* ---------------------------------------------------- */
+/* MEDIA QUERY: Ajustes para Telas Pequenas (Mobile) */
+/* ---------------------------------------------------- */
+
+@media (max-width: 600px) {
+    .banner {
+        /* Permite que o cabeçalho se expanda quando o conteúdo empilhar */
+        height: auto; 
+        padding: 10px 0; /* Adiciona um padding vertical para respiro */
+    }
+
+    .ban {
+        /* Empilha o logo e o texto na vertical */
+        flex-direction: column; 
+        
+        /* Centraliza tudo */
+        align-items: center; 
+        justify-content: center;
+        padding-left: 0; /* Remove o padding esquerdo em mobile */
+        gap: 5px;
+    }
+
+    .banner img {
+        /* Reduz o tamanho do logo em mobile, se necessário */
+        width: 100px; 
+        height: auto;
+    }
+    
+    .texto-header {
+        /* Centraliza todo o texto dentro do bloco */
+        text-align: center; 
+        padding: 0 10px; /* Adiciona um pequeno padding para não colar nas bordas */
+        font-size: 0.8em; /* Reduz o tamanho da fonte */
+    }
+}
+
+

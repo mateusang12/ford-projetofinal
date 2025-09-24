@@ -1,0 +1,269 @@
+/* Estrutura de card dos pilotos*/
+section {
+    min-height: 382px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 16px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  section .info-piloto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  section .info-piloto > * {
+    margin: 8px;
+  }
+  
+  .texto-h2 {
+    font-family: var(--font-montserrat);
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    line-height: 26px;
+    text-align: center;
+    max-width: 90%;
+  }
+  
+  .texto-h3 {
+    /* Mantém as propriedades existentes (fonte, tamanho, etc.) */
+    font-family: var(--font-montserrat);
+    font-size: 32px; 
+    font-weight: bold;
+    text-align: center;
+    
+    /* 1. COR DO TEXTO (Seu "bege" ou cor de destaque) */
+    color: wheat; /* Exemplo de cor bege (Beige) */
+    
+    /* 2. CONTORNO FINO (Sombra de Texto) */
+    /* Aplica 4 sombras pretas finas (1px) em direções diferentes: */
+    text-shadow: 
+        2px  2px 0 #000, /* Canto inferior direito */
+       -1px -1px 0 #000, /* Canto superior esquerdo */
+        1px -1px 0 #000, /* Canto superior direito */
+       -1px  1px 0 #000; /* Canto inferior esquerdo */
+}
+
+  .figura {
+    height: 300px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .info-piloto {
+    padding: 15px;
+    text-align: center;
+    max-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-pilotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+
+
+  /*Estilo da imagem e favoritar
+
+  section .imagem {
+    margin-top: 32px;
+  }
+  section img {
+    width: 128px;
+    height: 184px;
+    margin-bottom: 20px;
+  }
+  .favorito-btn {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #ff5252;
+    padding: 0;
+    outline: none;
+  }
+  .favorito-btn:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  } */
+
+  /* Container Principal */
+.comparacao-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #100A49;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comparacao-container h2 {
+  text-align: center;
+  color: white;
+  font-family: var(--font-montserrat);
+  margin-bottom: 20px;
+}
+
+/* Seletor de Pilotos */
+.seletor-pilotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+  
+}
+
+.selecao-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-family: var(--font-montserrat);
+  
+}
+
+.seletor-pilotos span {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secundaria);
+  color: white;
+}
+
+/* Tabela de Comparação (Layout de 3 Colunas) */
+.tabela-comparacao {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.linha {
+  display: grid;
+  /* 3 colunas: Valor Piloto 1 (40%) | Label Central (20%) | Valor Piloto 2 (40%) */
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-family: var(--font-montserrat);
+}
+
+.linha:last-child {
+  border-bottom: none;
+}
+
+.linha:nth-child(even) {
+  background-color: black; /* Estilo zebrado */
+}
+
+/* Cabeçalho (Imagens e Nomes) */
+.linha.header {
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ddd;
+  padding: 20px 0 15px 0;
+}
+
+.piloto-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figura-comparacao {
+  width: 250px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--color-secundaria); /* Adiciona uma borda colorida */
+}
+
+.label-col {
+  font-weight: var(--font-weight-bold);
+  color: white;
+  padding: 0 5px;
+}
+
+/* Estilos de Valor */
+.valor-piloto {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+/* Destaque (Highlight) */
+.highlight-left {
+  background-color: rgba(0, 128, 0, 0.1); /* Verde claro para o melhor */
+  border-radius: 4px;
+}
+
+.highlight-right {
+  background-color: rgba(0, 128, 0, 0.1); /* Verde claro para o melhor */
+  border-radius: 4px;
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 600px) {
+  .linha {
+      grid-template-columns: 1.5fr 1fr 1.5fr;
+      font-size: 14px;
+  }
+
+  .seletor-pilotos {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .selecao-input {
+      width: 80%;
+  }
+
+  .figura-comparacao {
+      width: 80px;
+      height: 80px;
+  }
+
+  .linha.header .label-col {
+      display: none;
+  }
+
+  .linha.header {
+      grid-template-columns: 1fr 1fr;
+  }
+}

@@ -2,7 +2,7 @@
 
 .apoiadores-container {
   background-color: #000; /* Fundo preto */
-  padding: 40px 0; /* Espaçamento interno */
+  padding: 40px 20px; /* Espaçamento interno */
   width: 100%;
   text-align: center; /* Centraliza o texto (como o h2) dentro do container */
 }
@@ -11,6 +11,10 @@
   color: wheat; /* Cor do texto branco */
   font-family: var(--font-sanserif);
   font-size: 2em; /* Tamanho da fonte, ajuste se precisar */
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  width: 100%;
   margin-bottom: 30px; /* Espaçamento abaixo do título e acima das imagens */
 }
 
@@ -18,11 +22,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .apoiadores-imagens img {
-  height: 50px;
+  height: 45px;
   width: auto;
 }
 
@@ -61,6 +66,37 @@
 
 .logosenai {
   max-width: 130px;
+}
+
+/* --- Media Query para Telas Pequenas (Celular) --- */
+
+@media (max-width: 600px) {
+  
+  .apoiadores-container {
+      padding: 30px 2%; /* Reduz um pouco o padding em telas pequenas */
+  }
+
+  .apoiadores-imagens {
+    /* 1. Reduzir o espaçamento para caber mais na tela */
+    gap: 10px;
+    justify-content: space-around; 
+    
+    /* 2. Permite que as logos quebrem para a próxima linha */
+    /* Isso é crucial se você tiver 4 ou mais logos */
+    flex-wrap: wrap; 
+  }
+
+  .apoiadores-imagens > * {
+    /* Garante que o contêiner de cada apoiador não ocupe muito espaço */
+    max-width: 30%; 
+  }
+
+  .apoiadores-imagens img, 
+  .logosenai {
+    /* 3. Reduz o tamanho das logos */
+    height: 40px; 
+    max-width: 100%; /* Garante que a imagem se ajuste ao seu contêiner pai */
+  }
 }
 
 

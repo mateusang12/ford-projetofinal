@@ -1,4 +1,4 @@
-import { Piloto } from "./componentes/piloto/piloto";
+import { Piloto } from "./pages/home/piloto/piloto";
 
 export const pilotos: Piloto[] = [
     {

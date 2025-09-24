@@ -1,0 +1,57 @@
+
+<div class="comparacao-container">
+    <h2>Comparação de Pilotos</h2>
+
+    <div class="seletor-pilotos">
+        <select class="selecao-input" (change)="onSelectChange($event, true)"
+                [value]="pilotoSelecionado1?.id">
+            <option *ngFor="let piloto of pilotos" [value]="piloto.id">
+                {{ piloto.titulo }}
+            </option>
+        </select>
+        <span>VS</span>
+        <select class="selecao-input" (change)="onSelectChange($event, false)"
+                [value]="pilotoSelecionado2?.id">
+            <option *ngFor="let piloto of pilotos" [value]="piloto.id">
+                {{ piloto.titulo }}
+            </option>
+        </select>
+    </div>
+
+    <div class="tabela-comparacao" *ngIf="pilotoSelecionado1 && pilotoSelecionado2">
+
+        <div class="linha header">
+            <div class="piloto-info left">
+                <img [src]="pilotoSelecionado1.imagem" [alt]="pilotoSelecionado1.titulo" class="figura-comparacao">
+                <h3 class="texto-h3">{{ pilotoSelecionado1.titulo }}</h3>
+            </div>
+            <div class="label-col"></div>
+            <div class="piloto-info right">
+                <img [src]="pilotoSelecionado2.imagem" [alt]="pilotoSelecionado2.titulo" class="figura-comparacao">
+                <h3 class="texto-h3">{{ pilotoSelecionado2.titulo }}</h3>
+            </div>
+        </div>
+
+        <div class="linha" *ngFor="let item of caracteristicas">
+            <div class="valor-piloto left" 
+                [class]="getDataHighlightClass(item.key, 
+                    getPilotValue(pilotoSelecionado1, item.key), 
+                    getPilotValue(pilotoSelecionado2, item.key))">
+                
+                {{ getPilotValue(pilotoSelecionado1, item.key) }}
+            </div>
+
+            <div class="label-col">
+                <strong class="label-texto">{{ item.label }}</strong>
+            </div>
+
+            <div class="valor-piloto right" 
+                [class]="getDataHighlightClass(item.key, 
+                    getPilotValue(pilotoSelecionado1, item.key), 
+                    getPilotValue(pilotoSelecionado2, item.key))">
+                
+                {{ getPilotValue(pilotoSelecionado2, item.key) }}
+            </div>
+        </div>
+    </div>
+</div>

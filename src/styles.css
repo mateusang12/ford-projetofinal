@@ -18,11 +18,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
+
 body {
 	line-height: 1;
 }
@@ -46,7 +43,7 @@ table {
 :root {
 	--font-montserrat: 'Montserrat', sans-serif;
 	--font-prata: 'Prata', serif;
-	--color-primaria: #6278F7;
+	--color-primaria: #040405;
 	--color-secundaria: #2E2E2E;
 	--font-weight-normal: 400;
 	--font-weight-bold: 700;
@@ -67,29 +64,32 @@ table {
 	margin: 0 auto;
   }
 
+  html{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  }
   body {
 	overflow-x: hidden;
+	height: 100vh;
 	box-sizing: border-box;
-	padding-top: 90px; /* Use a altura do seu cabeçalho aqui */
+	padding-top: 100px; 
   }
   
  
-  /* Opcional: Garanta que o cabeçalho fique no topo */
   app-cabecalho {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1000; /* Garante que o cabeçalho fique sobre o conteúdo */
+	z-index: 1000;
   }
 
-  /* src/app/styles.css ou no seu componente de pilotos */
+  
 
 @media (max-width: 768px) {
-	/* Regras que se aplicam em telas de até 768px de largura */
-	
 	.container-pilotos {
-	  /* Em telas pequenas, alinhe os cards de uma forma diferente */
 	  flex-direction: column;
 	  align-items: center;
 	}
