@@ -74,7 +74,9 @@
   
   .apoiadores-container {
       padding: 30px 2%; /* Reduz um pouco o padding em telas pequenas */
-  }
+      position: relative;
+      top: 70%;
+    }
 
   .apoiadores-imagens {
     /* 1. Reduzir o espaçamento para caber mais na tela */

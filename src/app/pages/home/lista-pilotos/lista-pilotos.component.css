@@ -35,3 +35,14 @@
   z-index: 1; /* Defina uma camada menor para os cards de pilotos */
 }
 
+@media (max-width: 600px) {
+
+  .texto-titulo {
+    position: absolute;
+    top: 44%;
+  }
+  .linha-destaque--grande {
+    position: absolute;
+    top: 67%;
+  }
+}
