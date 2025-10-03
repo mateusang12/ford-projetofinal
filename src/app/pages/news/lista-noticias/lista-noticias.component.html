@@ -1,0 +1,21 @@
+<div class="news-list-container">
+  
+    <div *ngFor="let noticia of noticias" class="news-card">
+
+      <div class="card-imagem">
+        <img [src]="noticia.imagemUrl" [alt]="noticia.titulo">
+      </div>
+      
+      <div class="card-conteudo">
+        <a [href]="noticia.link" target="_blank" class="card-titulo">
+          <h2>{{ noticia.titulo }}</h2>
+        </a>
+        
+        <p class="card-data">
+          Publicado em: <strong>{{ formatarData(noticia.dataPublicacao) }}</strong>
+        </p>
+      </div>
+      
+    </div>
+    
+  </div>
