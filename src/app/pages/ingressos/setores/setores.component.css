@@ -5,3 +5,164 @@
     padding-top: 200px;
     
 }
+
+/* Variáveis de Cores (Exemplos) */
+:root {
+    --color-text: white;     /* Texto Branco para todos */
+    
+    /* Novas Cores */
+    --color-a: #cc0000;    /* Vermelho (Padrão Arquibancada) */
+    --color-b: #008000;    /* Verde */
+    --color-d: #0000cc;    /* Azul */
+    --color-g: #ff9900;    /* Laranja/Âmbar */
+    --color-h: ##ff9900;
+}
+
+/* O estilo base do card (cor do texto, padding, sombra) permanece no .setor-item */
+.setor-item {
+    color: var(--color-text); /* Texto Branco */
+    padding: 18px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    transition: box-shadow 0.2s;
+}
+
+/* 1. Cor Específica para o Setor A (exemplo: Vermelho) */
+.setor-item.cor-a {
+    background-color: red;
+}
+
+/* 2. Cor Específica para o Setor B (exemplo: Verde) */
+.setor-item.cor-b {
+    background-color: var(--color-b);
+}
+
+/* 3. Cor Específica para o Setor D (exemplo: Azul) */
+.setor-item.cor-d {
+    background-color: var(--color-d);
+}
+
+/* 4. Cor Específica para o Setor G (exemplo: Âmbar/Laranja Escuro) */
+.setor-item.cor-g {
+    background-color: var(--color-g);
+}
+
+/* ... o restante do CSS (setores-lista, setor-detalhes, buy-button, etc.) permanece inalterado ... */
+/* Apenas ajuste o wrapper para o CSS anterior que você estava usando para não ter problemas: */
+.setores-wrapper {
+    max-width: 800px; 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4; 
+    border-radius: 8px;
+}
+
+.setores-lista { 
+    display: grid;
+    gap: 15px; 
+    grid-template-columns: 1fr; 
+}
+
+@media (min-width: 600px) {
+    .setores-lista {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+/* ... resto do CSS de layout e detalhes ... */
+
+/* Estilo do Card */
+.setor-item {
+    color: var(--color-text); /* Texto Branco */
+    padding: 18px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    transition: box-shadow 0.2s;
+}
+
+
+
+.setor-item.cor-a {
+    background-color: orange;
+}
+
+.setor-item.cor-h {
+    background-color: orange;
+}
+
+.setor-item.cor-m {
+    background-color: orange;
+}
+
+.setor-item:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Título e Seta */
+.setor-titulo {
+    font-weight: bold;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo da Seta (Fechado) */
+.arrow-icon::before {
+    content: '▶'; 
+    font-size: 0.9em;
+    transition: transform 0.3s;
+    margin-left: 15px;
+    color: var(--color-text);
+}
+
+/* Seta no estado ativo (Aberto) */
+.setor-item.active .arrow-icon::before {
+    content: '▼'; 
+}
+
+/* Área de Conteúdo Expandido */
+.setor-detalhes {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4); 
+    
+    /* Inicia Escondido */
+    max-height: 0; 
+    opacity: 0;    
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in;
+    overflow: hidden;
+}
+
+.setor-detalhes p {
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+/* Estado Ativo: Expande o conteúdo */
+.setor-item.active .setor-detalhes {
+    max-height: 300px; 
+    opacity: 1;      
+}
+
+/* Estilo do Botão "Comprar Ingressos" */
+.buy-button {
+    background-color: white;
+    color: #333; 
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+    text-decoration: none; 
+    display: inline-block; 
+}

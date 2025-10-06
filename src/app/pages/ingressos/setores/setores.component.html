@@ -2,3 +2,112 @@
     <img src="mapasetores.png" alt="">
 </div>
 
+<div class="setores-wrapper">
+   
+
+    <div class="setores-lista">
+        
+        <div 
+            class="setor-item cor-a" 
+            [class.active]="setorA.estaAtivo"
+            (click)="alternarExibicao(setorA)"
+        >
+            <span class="setor-titulo">
+                {{ setorA.nome }}
+                <span class="arrow-icon"></span> 
+            </span>
+            <div class="setor-detalhes">
+                <p>{{ setorA.descricao }}</p> 
+                <a [href]="setorA.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                    Comprar Ingressos
+                </a>
+            </div>
+        </div>
+
+        <div 
+            class="setor-item cor-b" 
+            [class.active]="setorB.estaAtivo"
+            (click)="alternarExibicao(setorB)"
+        >
+            <span class="setor-titulo">
+                {{ setorB.nome }}
+                <span class="arrow-icon"></span> 
+            </span>
+            <div class="setor-detalhes">
+                <p>{{ setorB.descricao }}</p> 
+                <a [href]="setorB.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                    Comprar Ingressos
+                </a>
+            </div>
+        </div>
+        
+        <div 
+            class="setor-item cor-d" 
+            [class.active]="setorD.estaAtivo"
+            (click)="alternarExibicao(setorD)"
+        >
+            <span class="setor-titulo">
+                {{ setorD.nome }}
+                <span class="arrow-icon"></span> 
+            </span>
+            <div class="setor-detalhes">
+                <p>{{ setorD.descricao }}</p> 
+                <a [href]="setorD.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                    Comprar Ingressos
+                </a>
+            </div>
+        </div>
+
+        <div 
+            class="setor-item cor-g" 
+            [class.active]="setorG.estaAtivo"
+            (click)="alternarExibicao(setorG)"
+        >
+            <span class="setor-titulo">
+                {{ setorG.nome }}
+                <span class="arrow-icon"></span> 
+            </span>
+            <div class="setor-detalhes">
+                <p>{{ setorG.descricao }}</p> 
+                <a [href]="setorG.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                    Comprar Ingressos
+                </a>
+            </div>
+        </div>
+
+            <div 
+            class="setor-item cor-h" 
+            [class.active]="setorH.estaAtivo"
+            (click)="alternarExibicao(setorH)"
+        >
+            <span class="setor-titulo">
+                {{ setorH.nome }}
+                <span class="arrow-icon"></span> 
+            </span>
+            <div class="setor-detalhes">
+                <p>{{ setorH.descricao }}</p> 
+                <a [href]="setorG.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                    Comprar Ingressos
+                </a>
+            </div>
+        </div>
+
+        <div 
+            class="setor-item cor-m" 
+            [class.active]="setorM.estaAtivo"
+            (click)="alternarExibicao(setorM)"
+        >
+            <span class="setor-titulo">
+                {{ setorM.nome }}
+                <span class="arrow-icon"></span> 
+            </span>
+            <div class="setor-detalhes">
+                <p>{{ setorM.descricao }}</p> 
+                <a [href]="setorG.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                    Comprar Ingressos
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
