@@ -1,0 +1,81 @@
+/* src/app/componentes/cabecalho/cabecalho.component.css */
+
+.banner {
+    background-color: black;
+    height: 100px; /* Isso pode ser ajustado para 'auto' se o conteúdo empilhar */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+    /* Adicione estas propriedades para o layout padrão (desktop) */
+
+    align-items: center; /* Alinha o conteúdo (o .ban) verticalmente */
+}
+
+.ban {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaçamento entre a imagem e o bloco de texto */
+    color: white;
+    padding-left: 20%;
+    width: 200px;
+    padding-bottom: 20px;
+  
+}
+
+.banner img {
+    /* Remova o margin-left fixo para centralização no mobile */
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.titulo-ingressos a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.titulo-ingressos {
+    text-align: end;
+    position: absolute;
+    /* Adicione esta linha para mover o elemento para cima */
+    top: 40px; 
+    /* Você também pode precisar ajustar a posição horizontal
+       usando 'right' já que está em 'position: absolute' */
+    right: 100px; /* Ajuste este valor conforme necessário */
+}
+
+
+
+/* ---------------------------------------------------- */
+/* MEDIA QUERY: Ajustes para Telas Pequenas (Mobile) */
+/* ---------------------------------------------------- */
+
+@media (max-width: 600px) {
+    .banner {
+        /* Permite que o cabeçalho se expanda quando o conteúdo empilhar */
+        height: auto; 
+        padding: 10px 0; /* Adiciona um padding vertical para respiro */
+    }
+
+    .ban {
+        /* Empilha o logo e o texto na vertical */
+        flex-direction: column; 
+        
+        /* Centraliza tudo */
+        align-items: center; 
+        justify-content: center;
+        padding-left: 0; /* Remove o padding esquerdo em mobile */
+        gap: 5px;
+    }
+
+    .banner img {
+        /* Reduz o tamanho do logo em mobile, se necessário */
+        width: 100px; 
+        height: auto;
+    }
+    
+    
+}

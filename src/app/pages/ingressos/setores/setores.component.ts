@@ -21,7 +21,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-a', 
     nome: 'SETOR A', 
     descricao: 'Vista privilegiada da largada/chegada e da primeira curva. É uma das áreas mais emocionantes para assistir à corrida, com assentos cobertos disponíveis.', 
-    link: 'https://link-setor-a-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -29,7 +29,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-b', 
     nome: 'SETOR B', 
     descricao: 'Boa visibilidade da reta principal e da entrada do pit lane. Potenciais momentos de ultrapassagem na reta. Coberto.', 
-    link: 'https://link-setor-b-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -37,7 +37,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-d', 
     nome: 'SETOR D', 
     descricao: 'Localizado no miolo do circuito, oferecendo uma visão mais ampla de múltiplos trechos da pista. Coberto.', 
-    link: 'https://link-setor-d-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -45,7 +45,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-g', 
     nome: 'SETOR G', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -53,7 +53,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-h', 
     nome: 'SETOR H', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -61,7 +61,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-m', 
     nome: 'SETOR M', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -69,7 +69,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-r', 
     nome: 'SETOR R', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -77,7 +77,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-t', 
     nome: 'SETOR T (SHELL)', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -85,7 +85,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-porto', 
     nome: 'ARQUIBANCADA PORTO', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -93,7 +93,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-gramado', 
     nome: 'HEINEKEN VILLAGE - GRAMADO', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -101,7 +101,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-estrela', 
     nome: 'HEINEKEN VILLAGE - ESTRELA', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -109,7 +109,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-treeclub', 
     nome: 'ORANGE TREE CLUB', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };
 
@@ -117,7 +117,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-pitstopclub', 
     nome: 'PIT STOP CLUB', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   };  
 
@@ -125,7 +125,7 @@ export class SetoresComponent implements OnInit {
     id: 'setor-grandprixclub', 
     nome: 'GRAND PRIX CLUB', 
     descricao: 'Setor popular e energético, próximo a uma curva de alta velocidade. Descoberto. Excelente para sentir a velocidade.', 
-    link: 'https://link-setor-g-ingressos',
+    link: '/venda',
     estaAtivo: false 
   }; 
 

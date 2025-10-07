@@ -109,5 +109,145 @@
             </div>
         </div>
 
+        <div 
+            class="setor-item cor-r" 
+            [class.active]="setorM.estaAtivo"
+            (click)="alternarExibicao(setorR)"
+        >
+            <span class="setor-titulo">
+                {{ setorR.nome }}
+                <span class="arrow-icon"></span> 
+            </span>
+            <div class="setor-detalhes">
+                <p>{{ setorR.descricao }}</p> 
+                <a [href]="setorG.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                    Comprar Ingressos
+                </a>
+            </div>
+        </div>
+
+        <div 
+        class="setor-item cor-t" 
+        [class.active]="setorT.estaAtivo"
+        (click)="alternarExibicao(setorT)"
+    >
+        <span class="setor-titulo">
+            {{ setorT.nome }}
+            <span class="arrow-icon"></span> 
+        </span>
+        <div class="setor-detalhes">
+            <p>{{ setorT.descricao }}</p> 
+            <a [href]="setorT.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                Comprar Ingressos
+            </a>
+        </div>
+    </div>
+
+    
+
+
+
+<div 
+        class="setor-item cor-porto" 
+        [class.active]="setorporto.estaAtivo"
+        (click)="alternarExibicao(setorporto)"
+    >
+        <span class="setor-titulo">
+            {{ setorporto.nome }}
+            <span class="arrow-icon"></span> 
+        </span>
+        <div class="setor-detalhes">
+            <p>{{ setorporto.descricao }}</p> 
+            <a [href]="setorporto.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                Comprar Ingressos
+            </a>
+        </div>
+    </div>
+
+    <div 
+        class="setor-item cor-grandprixclub" 
+        [class.active]="setorGRANDPRIXCLUB.estaAtivo"
+        (click)="alternarExibicao(setorGRANDPRIXCLUB)"
+    >
+        <span class="setor-titulo">
+            {{ setorGRANDPRIXCLUB.nome }}
+            <span class="arrow-icon"></span> 
+        </span>
+        <div class="setor-detalhes">
+            <p>{{ setorGRANDPRIXCLUB.descricao }}</p> 
+            <a [href]="setorGRANDPRIXCLUB.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                Comprar Ingressos
+            </a>
+        </div>
+    </div>
+
+        <div 
+        class="setor-item cor-gramado" 
+        [class.active]="setorGRAMADO.estaAtivo"
+        (click)="alternarExibicao(setorGRAMADO)"
+    >
+        <span class="setor-titulo">
+            {{ setorGRAMADO.nome }}
+            <span class="arrow-icon"></span> 
+        </span>
+        <div class="setor-detalhes">
+            <p>{{ setorGRAMADO.descricao }}</p> 
+            <a [href]="setorGRAMADO.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                Comprar Ingressos
+            </a>
+        </div>
+    </div>
+
+    <div 
+    class="setor-item cor-estrela" 
+    [class.active]="setorESTRELA.estaAtivo"
+    (click)="alternarExibicao(setorESTRELA)"
+>
+    <span class="setor-titulo">
+        {{ setorESTRELA.nome }}
+        <span class="arrow-icon"></span> 
+    </span>
+    <div class="setor-detalhes">
+        <p>{{ setorESTRELA.descricao }}</p> 
+        <a [href]="setorESTRELA.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+            Comprar Ingressos
+        </a>
+    </div>
+</div>
+
+    <div 
+        class="setor-item cor-treeclub" 
+        [class.active]="setorTREECLUB.estaAtivo"
+        (click)="alternarExibicao(setorTREECLUB)"
+    >
+        <span class="setor-titulo">
+            {{ setorTREECLUB.nome }}
+            <span class="arrow-icon"></span> 
+        </span>
+        <div class="setor-detalhes">
+            <p>{{ setorTREECLUB.descricao }}</p> 
+            <a [href]="setorTREECLUB.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                Comprar Ingressos
+            </a>
+        </div>
+    </div>
+
+    <div 
+        class="setor-item cor-pitstopclub" 
+        [class.active]="setorPITSTOPCLUB.estaAtivo"
+        (click)="alternarExibicao(setorPITSTOPCLUB)"
+    >
+        <span class="setor-titulo">
+            {{ setorPITSTOPCLUB.nome }}
+            <span class="arrow-icon"></span> 
+        </span>
+        <div class="setor-detalhes">
+            <p>{{ setorPITSTOPCLUB.descricao }}</p> 
+            <a [href]="setorPITSTOPCLUB.link" target="_blank" class="buy-button" (click)="$event.stopPropagation()">
+                Comprar Ingressos
+            </a>
+        </div>
+    </div>
+
     </div>
 </div>

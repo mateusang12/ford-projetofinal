@@ -29,28 +29,82 @@
     flex-direction: column;
     overflow: hidden; 
     transition: box-shadow 0.2s;
+    line-height: 1.5;
 }
 
 /* 1. Cor Específica para o Setor A (exemplo: Vermelho) */
 .setor-item.cor-a {
-    background-color: red;
+    background-color: #b87400;
+    color: white;
 }
 
 /* 2. Cor Específica para o Setor B (exemplo: Verde) */
 .setor-item.cor-b {
-    background-color: var(--color-b);
+    background-color: #b87400;
+    color: white;
 }
 
 /* 3. Cor Específica para o Setor D (exemplo: Azul) */
 .setor-item.cor-d {
-    background-color: var(--color-d);
+    background-color: #b87400;
+    color: white;
 }
 
 /* 4. Cor Específica para o Setor G (exemplo: Âmbar/Laranja Escuro) */
 .setor-item.cor-g {
-    background-color: var(--color-g);
+    background-color: #b87400;
+    color: white;
 }
 
+.setor-item.cor-h {
+    background-color: #b87400;
+    color: white;
+}
+
+.setor-item.cor-m {
+    background-color: #b87400;
+    color: white;
+}
+
+.setor-item.cor-r {
+    background-color: #b87400;
+    color: white;
+}
+
+.setor-item.cor-t {
+    background-color: red;
+    color: white;
+}
+
+.setor-item.cor-porto {
+    background-color: #37A5C8;
+    color: white;
+}
+
+.setor-item.cor-grandprixclub {
+    background-color: grey;
+    color: white;
+}
+
+.setor-item.cor-gramado {
+    background-color: green;
+    color: white;
+}
+
+.setor-item.cor-estrela {
+    background-color: green;
+    color: white;
+}
+
+.setor-item.cor-treeclub {
+    background-color: #2271B3;
+    color: white;
+}
+
+.setor-item.cor-pitstopclub {
+    background-color: #2271B3;
+    color: white;
+}
 /* ... o restante do CSS (setores-lista, setor-detalhes, buy-button, etc.) permanece inalterado ... */
 /* Apenas ajuste o wrapper para o CSS anterior que você estava usando para não ter problemas: */
 .setores-wrapper {
@@ -87,19 +141,6 @@
     transition: box-shadow 0.2s;
 }
 
-
-
-.setor-item.cor-a {
-    background-color: orange;
-}
-
-.setor-item.cor-h {
-    background-color: orange;
-}
-
-.setor-item.cor-m {
-    background-color: orange;
-}
 
 .setor-item:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.4);
