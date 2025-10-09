@@ -85,6 +85,21 @@ table {
 	width: 100%;
 	z-index: 1000;
   }
+
+  /* Este código DEVE estar no arquivo de estilos globais */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    width: 100%;
+    font-family: Arial, sans-serif; 
+}
+
+/* Adicione também a regra para o elemento raiz do Angular */
+app-root {
+    display: block;
+    height: 100%;
+}
   
 
 @media (max-width: 768px) {

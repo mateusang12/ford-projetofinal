@@ -1,1 +1,152 @@
-<p>login works!</p>
+<div class="auth-container">
+  <div class="image-section" [style.background-image]="'url(' + getCurrentImageUrl() + ')'">
+    <div class="image-overlay">
+      <h1>Velocidade & Precisão</h1>
+      <p>Acesse sua conta para começar a cronometrar suas voltas.</p>
+    </div>
+  </div>
+
+  <div class="form-section">
+    
+    <form 
+      [hidden]="!isLoginMode" 
+      (ngSubmit)="onSubmitLogin()" 
+      class="auth-form">
+      
+      <img src="HEADERF1LOGO.png" alt="Logo Fórmula 1" class="auth-logo">
+      
+      <div class="form-group">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="login-password">Senha</label>
+        <input type="password" id="login-password" name="password" required>
+      </div>
+
+    
+    </form>
+
+    <form 
+  [hidden]="!isLoginMode" 
+  (ngSubmit)="onSubmitLogin()" 
+  class="auth-form">
+  
+  <button type="submit" class="submit-button">Fazer Login</button>
+  
+  <div class="link-group">
+    <a href="#" class="forgot-link">Esqueceu a senha?</a>
+    
+    <a href="#" (click)="switchToRegister(); $event.preventDefault();" class="register-link">
+      Não tem conta? <strong>Cadastre-se</strong>
+    </a>
+  </div>
+</form>
+
+
+    <form 
+      [hidden]="isLoginMode" 
+      (ngSubmit)="onSubmitRegister()" 
+      class="auth-form register-form">
+      
+      
+      <h2 class="form-subtitle top-aligned">Criar Nova Conta</h2>
+
+
+
+      <div class="form-group">
+        <label for="register-nome">Nome Completo</label>
+        <input 
+          type="text" 
+          id="register-nome" 
+          name="nome" 
+          placeholder="Ex: Jailson Santos"
+          required>
+      </div>
+     
+      
+
+
+      <div class="form-group">
+        <label for="register-email">Email</label>
+        <input 
+          type="text" 
+          id="register-email" 
+          name="email" 
+          placeholder="Ex: nome@email.com"
+          required>
+      </div>
+      
+
+      <div class="form-group">
+        <label for="register-birthdate">Data de Nascimento</label>
+        <input 
+          type="text" 
+          id="register-birthdate" 
+          name="birthdate" 
+          placeholder="Ex: 01/12/1990"
+          pattern="\d{2}/\d{2}/\d{4}" 
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-address">Endereço</label>
+        <input 
+          type="text" 
+          id="register-address" 
+          name="address" 
+          placeholder="Ex: Av. Paulista"
+          required>
+      </div>
+
+
+
+
+      <div class="form-group">
+        <label for="register-estado">Estado</label>
+        <input 
+          type="text" 
+          id="register-estado" 
+          name="estado" 
+          placeholder="Ex: São Paulo"
+          required>
+      </div>
+    
+      
+      <div class="form-group">
+        <label for="register-senha">Senha</label>
+        <input 
+          type="text" 
+          id="register-senha" 
+          name="senha" 
+          placeholder="Mínimo 6 dígitos"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-repetirsenha">Repetir Senha</label>
+        <input 
+          type="text" 
+          id="register-repetirsenha" 
+          name="repetirsenha" 
+          placeholder="Mínimo 6 dígitos"
+          required>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Eu concordo com os <a href="#">Termos e Serviços</a></label>
+      </div>
+      
+      <button type="submit" class="submit-button">Cadastrar</button>
+      
+      <div class="link-group">
+        <a href="#" (click)="switchToLogin(); $event.preventDefault();" class="register-link">
+          Já tem conta? <strong>Voltar para Login</strong>
+        </a>
+      </div>
+    </form>
+
+  </div>
+</div>
