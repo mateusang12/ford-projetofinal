@@ -5,9 +5,19 @@ import { NewsComponent } from './pages/news/news.component';
 import { VendaComponent } from './pages/venda/venda.component';
 import { LoginComponent } from './pages/login/login.component';
 
+// Importe o componente para páginas não encontradas (Crie um se não tiver)
+// import { NotFoundComponent } from './pages/not-found/not-found.component'; 
 
 
 export const routes: Routes = [
+    // 1. ROTA PADRÃO: Redireciona a URL raiz para a página de Login
+    {
+        path: '',
+        redirectTo: '/login',
+        pathMatch: 'full' // Garante que apenas a URL completa seja redirecionada
+    },
+    
+    // 2. ROTAS PRINCIPAIS
     {
         path: 'home',
         component: HomeComponent
@@ -27,5 +37,14 @@ export const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+
+    // 3. ROTA CURINGA: Captura qualquer URL que não corresponda às acima
+    // Geralmente redireciona para uma página de erro 404
+    /*
+    { 
+        path: '**', 
+        component: NotFoundComponent 
     }
+    */
 ];

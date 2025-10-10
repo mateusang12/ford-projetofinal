@@ -1,234 +1,208 @@
-/* Container Principal: Usa Flexbox para dividir a tela */
-/* Container Principal: Usa Flexbox para dividir a tela */
-.auth-container {
-    display: flex;
-    /* Removemos height: 100vh. A altura será ditada pelo conteúdo. */
-    min-height: 100vh; /* GARANTE que ele ocupe, NO MÍNIMO, a altura total da tela */
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    /* Remover 'overflow: hidden' para permitir a rolagem quando o conteúdo for maior */
-    /* overflow: hidden; */ 
-}
+/* ==================================================== */
+/* 1. RESET E ESTRUTURA PRINCIPAL */
+/* ==================================================== */
 
-.auth-logo {
-    display: block;
-    /* --- INÍCIO DAS CORREÇÕES --- */
-    max-width: 80%; /* Garante que a imagem nunca seja maior que 80% da caixa do formulário (400px) */
-    width: 250px;   /* Define uma largura máxima confortável, ajuste este valor (250px é um bom ponto de partida) */
-    height: auto;   /* CRUCIAL: Mantém a proporção da imagem (não a distorce) */
-    /* --- FIM DAS CORREÇÕES --- */
-    
-    margin: 0 auto 30px auto; /* Centraliza e adiciona margem inferior */
-}
-
-.cabecalho-login {
-    max-width: 200px;
-}
-
-/* Correção de Margens e Padding Padrão do Navegador */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Garante que o body ocupe a altura total do HTML */
+    height: 100%; 
     width: 100%;
-    /* Opcional: Fonte básica para o projeto */
-    font-family: Arial, sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7; /* Cor de fundo padrão da página */
 }
-/* ---------------------------------------------------- */
-/* COLUNA DA ESQUERDA: Carrossel de Imagens (55% da largura) */
-/* ---------------------------------------------------- */
+
+/* Container Principal: Usa Flexbox para dividir a tela em duas colunas */
+.auth-container {
+    display: flex;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==================================================== */
+/* 2. COLUNA DA ESQUERDA: Carrossel de Imagens */
+/* ==================================================== */
 .image-section {
-  width: 55%;
-  background-size: cover;
-  background-position: center;
-  /* Transição suave para a troca de imagens */
-  transition: background-image 0.5s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  color: white;
+    width: 55%; /* Coluna de Imagem maior */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
 }
 
 .image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* Escurece a imagem para destacar o texto */
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Escurece a imagem para destacar o texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Levemente mais escuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Texto na parte inferior */
+    padding: 50px;
 }
 
 .image-overlay h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
-  text-shadow: 2px 2px 4px #000;
+    font-size: 3.5em; /* Título maior */
+    margin-bottom: 0.1em;
+    font-weight: 800;
+    text-shadow: 3px 3px 6px #000;
 }
 
 .image-overlay p {
-  font-size: 1.2em;
-  text-shadow: 1px 1px 2px #000;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 3px #000;
+    line-height: 1.5;
 }
 
 
-/* ---------------------------------------------------- */
-/* COLUNA DA DIREITA: Formulário (45% da largura) */
-/* ---------------------------------------------------- */
-/* ---------------------------------------------------- */
-/* COLUNA DA DIREITA: Formulário (45% da largura) */
-/* ---------------------------------------------------- */
+/* ==================================================== */
+/* 3. COLUNA DA DIREITA: Formulário e Container */
+/* ==================================================== */
 .form-section {
-    width: 45%;
+    width: 45%; /* Coluna de Formulário menor */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 40px;
     background-color: #f7f7f7;
 }
 
 /* Estilização Geral do Formulário */
 .auth-form {
     width: 100%;
-    max-width: 400px;
-    padding: 30px; /* Padding padrão */
+    max-width: 420px; /* Levemente mais largo para melhor leitura */
+    padding: 30px; 
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra mais profunda */
+    margin: 10px 0; /* Pequena margem para centralização visual */
 }
 
-/* Ajuste específico para o formulário de Cadastro/Registro */
+/* Ajuste específico para o formulário de Cadastro/Registro (mais campos) */
 .register-form {
-    /* Reduz o padding superior e inferior para deixar mais espaço para os campos */
-    padding: 20px 30px; 
+    padding: 25px 30px; /* Ajuste o padding para acomodar mais campos */
 }
 
-/* ---------------------------------------------------- */
-/* ESTILOS DA LOGO E TÍTULOS */
-/* ---------------------------------------------------- */
-
-/* Estilização da Logo F1 (Mantida) */
+/* Estilização da Logo F1 */
 .auth-logo {
     display: block;
-    width: 250px; /* Tamanho ajustado na última interação */
+    width: 250px; 
     height: auto;
-    margin: 0 auto 15px auto; /* Reduzida a margem abaixo da logo */
+    margin: 0 auto 30px auto; /* Aumenta a margem para separar da seção do formulário */
 }
 
-/* Estilo do Subtítulo (usado no formulário de Cadastro e Recuperação) */
+/* Títulos do Formulário */
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
 .form-subtitle {
     text-align: center;
-    margin-top: 15px; /* Margem padrão */
+    margin-top: 15px; 
     margin-bottom: 25px;
     color: #555;
     font-size: 1.5em;
+    font-weight: 500;
 }
 
-/* NOVO ESTILO: Move o título para o topo no formulário de Cadastro */
 .form-subtitle.top-aligned {
-    margin-top: 0; /* Remove a margem superior */
-    margin-bottom: 20px; /* Mantém um pequeno espaço antes do primeiro campo */
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
-.auth-form h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #333;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #555;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.submit-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  background-color: #E60000; /* Cor de destaque F1 */
-  color: white;
-  font-size: 1.1em;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-.submit-button:hover {
-  background-color: #b30000;
-}
-
-/* Estilos para o link de alternância (abaixo do form de login) */
+/* GRUPO DE LINKS (Organização Vertical) */
 .link-group {
     display: flex;
-    flex-direction: column;
+    
+    /* ALTERAÇÃO CHAVE: Inverte a ordem dos links */
+    flex-direction: column; 
+    
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eee; 
+    line-height: 1.5;
+    
 }
 
+.link-group a {
+  text-decoration: none;
+}
+
+/* O resto do CSS para os links permanece o mesmo */
+
 .forgot-link {
-    display: block;
+    display: block; 
     text-align: center;
     font-size: 0.9em;
     color: #666;
-    margin-bottom: 5px;
-}
-
-.forgot-link:hover {
-  color: #007bff;
+    margin-bottom: 5px; /* Manter margem para espaçamento */
 }
 
 .register-link {
     display: block;
     text-align: center;
-    font-size: 1em;
-    color: #666;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    /* ... */
 }
+/* ==================================================== */
+/* 4. CAMPOS E BOTÕES */
+/* ==================================================== */
 
-.register-link:hover {
-    color: #E60000;
+.form-group {
+    margin-bottom: 20px;
 }
 
 /* Estilização do Checkbox (Termos e Serviços) */
+/* Estilização do Checkbox (Termos e Serviços) */
 .checkbox-group {
+    /* ALTERAÇÃO 1: Usa Flexbox para manter na mesma linha */
     display: flex;
-    align-items: center;
+    flex-direction: row; 
+    
+    /* ALTERAÇÃO 2: Centraliza horizontalmente o grupo inteiro */
+    justify-content: center; 
+    
+    /* Garante que os itens fiquem bem alinhados verticalmente */
+    align-items: center; 
+    
     margin-top: 25px;
     margin-bottom: 25px;
+    gap: 8px; /* Espaço pequeno entre o checkbox e a frase */
 }
 
 .checkbox-group input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    /* Remove qualquer margem extra que possa desalinhar */
+    margin: 0; 
 }
 
 .checkbox-group label {
+    /* O label agora não precisa de text-align: center, mas sim ser ajustado */
     font-weight: normal;
     margin-bottom: 0;
     font-size: 0.9em;
+    line-height: 1.4;
+    
+    /* Garante que o texto não seja centralizado, mas sim que o grupo seja */
+    text-align: left; 
+    
+    /* Opcional: define uma largura máxima para que o texto quebre em telas menores */
+    max-width: 90%; 
 }
 
 .checkbox-group label a {
@@ -236,6 +210,35 @@ html, body {
     text-decoration: none;
 }
 
-.checkbox-group label a:hover {
-    text-decoration: underline;
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333; /* Cor mais escura para o label */
+    font-size: 0.95em;
 }
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #E60000; /* Borda vermelha no foco (Tema F1) */
+    outline: none;
+    box-shadow: 0 0 0 1px #E60000;
+}
+
+/* Botão de Submissão */
+.submit-button {
+    width: 100%;
+    padding: 14px; /* Mais padding para ser mais chamativo */
+    border: none;
+    font-size: 1rem;
+    color: white;
+    background-color: #E60000 }

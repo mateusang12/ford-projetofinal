@@ -1,5 +1,5 @@
-// O código TypeScript permanece o mesmo.
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router'; 
 import { interval, Subscription } from 'rxjs';
 
 @Component({
@@ -8,7 +8,8 @@ import { interval, Subscription } from 'rxjs';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, OnDestroy { 
-  // ... (o código do carrossel e das funções de submissão são mantidos) ...
+  
+  // Lista de URLs das imagens do carrossel
   carImages: string[] = [
     'https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/03/02/16146818148058.jpg',
     'https://www.the-race.com/content/images/2025/02/GkGexlZXEAAz18V.jpg',
@@ -20,6 +21,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   // Variável de controle: Começa como TRUE (Login)
   isLoginMode: boolean = true; 
+  
+  // Injeção do Router
+  constructor(private router: Router) {} 
 
   ngOnInit(): void {
     this.startImageCarousel();
@@ -31,6 +35,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Lógica do Carrossel: troca a cada 3 segundos
   startImageCarousel(): void {
     const carInterval = interval(3000);
     this.imageIntervalSubscription = carInterval.subscribe(() => {
@@ -42,7 +47,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     return this.carImages[this.currentImageIndex];
   }
 
-  // Funções que controlam a visualização dos formulários
+  // =======================================
+  // Lógica de Alternância de Formulário
+  // =======================================
   switchToRegister(): void {
     this.isLoginMode = false;
   }
@@ -51,8 +58,29 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.isLoginMode = true;
   }
 
-  onSubmitLogin(): void {
-    console.log('Formulário de Login submetido!');
+  // =======================================
+  // Lógica de Login (COM VALIDAÇÃO)
+  // =======================================
+  fazerLogin(emailValue: string): void {
+    this.onSubmitLogin(emailValue);
+  }
+
+  onSubmitLogin(email: string): void {
+    const EMAIL_ADMIN = "admin@formulaone.com";
+    
+    const emailLimpo = email.trim().toLowerCase();
+    
+    if (emailLimpo === EMAIL_ADMIN) {
+      console.log('Login de Administrador bem-sucedido! Redirecionando...'); 
+      
+      // PERMITE O LOGIN: Redireciona
+      this.router.navigate(['/home']);
+      
+    } else {
+      // BLOQUEIA O LOGIN: Feedback simples via alert
+      console.error(`Acesso negado. Apenas o e-mail ${EMAIL_ADMIN} é permitido.`);
+      alert("Email não cadastrado. Tente novamente."); 
+    }
   }
 
   onSubmitRegister(): void {
