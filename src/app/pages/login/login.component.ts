@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       console.log('Login de Administrador bem-sucedido! Redirecionando...'); 
       
       // PERMITE O LOGIN: Redireciona
-      this.router.navigate(['/home']);
+      this.router.navigate(['/dashboard']);
       
     } else {
       // BLOQUEIA O LOGIN: Feedback simples via alert

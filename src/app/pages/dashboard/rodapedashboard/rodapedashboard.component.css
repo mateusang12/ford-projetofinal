@@ -1,0 +1,131 @@
+/* Estilos Gerais do Rodapé */
+.rodape-f1 {
+    /* Mantenha o seu CSS de aparência */
+    background-color: black; 
+    color: #ffffff;
+    padding: 20px 0;
+    width: 100%;
+    
+    /* AS REGRAS PARA FIXAR O RODAPÉ */
+    position: relative; /* Fixa o elemento na tela */
+    bottom: 0;      /* Alinha na parte inferior da tela */
+    left: 0;        /* Começa no canto esquerdo */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.container-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 40px; /* Garante uma altura mínima para visualização */
+}
+
+/* Estilos dos Blocos */
+.rodape-bloco {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Bloco Esquerda: Redes Sociais */
+.rodape-bloco.esquerda {
+    order: 1;
+}
+
+.redes-sociais-texto {
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.rodape-bloco.esquerda a {
+    text-decoration: none;
+    color: #100A49;
+    margin-right: 10px; /* Reduzi um pouco a margem */
+    transition: opacity 0.3s;
+    /* Adicionado display: block para o link para conter o ícone */
+    display: block; 
+}
+
+.rodape-bloco.esquerda a:hover {
+    opacity: 0.8;
+}
+
+/* Ícones REFORÇADOS (Aparecem como círculos brancos para teste) */
+.icone-social {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Transforma em círculo */
+    
+    
+    
+    
+    /* Para referência, se você usar Font Awesome, adicione os estilos do texto aqui: */
+    /* text-align: center; */
+    /* line-height: 24px; */
+    /* font-size: 16px; */
+    /* color: #0d1c3a; /* Cor do ícone */
+}
+
+.imglogo {
+    max-width: 40px;
+    max-height: 10%;
+    background-color: #100A49;
+    border-radius: 20px;
+}
+/* Bloco Central: Copyright */
+.rodape-bloco.centro {
+    order: 2;
+    text-align: center;
+    font-size: 14px;
+    /* Garantindo margem em telas menores para não encostar na logo */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.rodape-bloco.centro p {
+    margin: 0; /* Remove margem padrão do parágrafo */
+}
+
+
+/* Bloco Direita: Logo F1 */
+.rodape-bloco.direita {
+    order: 3;
+}
+
+.logo-f1 {
+    height: 30px; 
+    width: auto;
+    /* Tenta deixar a logo branca se for preta */
+    filter: brightness(0) invert(1); 
+    max-width: 150px; /* Limita o tamanho máximo da logo */
+}
+
+/* Responsividade (Para telas menores) */
+@media (max-width: 768px) {
+    .container-rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .rodape-bloco {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .redes-sociais-texto {
+        /* Para telas pequenas, coloca o texto das redes sociais em cima dos ícones */
+        display: block; 
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+
+    .rodape-bloco.esquerda { order: 1; margin-bottom: 15px; flex-wrap: wrap; }
+    .rodape-bloco.centro { order: 2; }
+    .rodape-bloco.direita { order: 3; margin-top: 15px; }
+}

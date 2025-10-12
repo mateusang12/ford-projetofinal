@@ -1,0 +1,273 @@
+/* Classes de controle */
+.hidden {
+  display: none !important;
+}
+
+/* 1. Container Principal (Fundo Preto da Viewport) */
+.main-content {
+  flex-grow: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  background-color: black; 
+  padding-top: 5px; 
+  position: relative; 
+}
+
+/* Linha de separação sutil abaixo do cabeçalho */
+.main-content::before {
+    content: "";
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+/* 2. Background-Image (Faixa Central - Bloco Preto Maior) */
+.background-image {
+  background-image: none;
+  background-color: black; 
+  
+  width: 95%; 
+  max-width: 1300px; 
+  
+  height: auto;
+  min-height: 80%; 
+  
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 0; 
+  
+  border-radius: 12px;
+  overflow: hidden; 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); 
+  border: none;
+}
+
+/* 3. Estilos dos Cards Containers (Pai dos menus e etapas) */
+.cards-container {
+  /* Margem vertical para criar o espaço vazio preto dentro do .background-image */
+  margin-top: 40px; 
+  margin-bottom: 40px; 
+  
+  /* Faixas azuis escuras que dão destaque */
+  border-top: 5px solid #100A49; 
+  border-bottom: 5px solid #100A49; 
+  
+  width: 95%; 
+  
+  /* Padding interno */
+  padding: 30px 30px; 
+  
+  display: flex;
+  gap: 25px; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center; 
+  background-color: transparent; 
+}
+
+
+.stages-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white; /* Cor branca para contraste com o fundo escuro */
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px; /* Espaço entre o título e os cards */
+    text-align: center; /* Centraliza o texto */
+    width: 100%;
+}
+
+/* --- Linhas Divisórias (Mantidas da Interação Anterior) --- */
+
+/* O restante do seu CSS (stages-wrapper, card-top, etc.) deve vir aqui. 
+   Certifique-se que o .stages-wrapper comece a partir da margem abaixo deste título. */
+
+/* Exemplo (para referência) de como seu .stages-wrapper deve estar: */
+.stages-wrapper {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px; 
+    width: 100%;
+    padding: 20px 0; 
+    position: relative; 
+    z-index: 1; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: auto !important;
+    transition: none !important;
+    color: white;
+    text-align: center;
+}
+
+
+.stages-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 5%; 
+    right: 5%; 
+    height: 2px; /* Espessura da faixa */
+    background-color: #100A49; /* Cor azul escuro */
+    z-index: 0; /* Fica atrás dos cards */
+    transform: translateY(-50%); /* Ajuste fino de centralização */
+}
+
+
+
+/* --- 4. Estilos Comuns de Card (MENU PRINCIPAL - REVERTIDO PARA O SEU ESTILO ORIGINAL) --- */
+.card {
+  background-color: black; /* Fundo preto */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px; 
+  height: 200px; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; 
+  
+  /* Bordas DENTRO do card para criar o efeito de moldura escura/azul */
+  border-top: 25px solid #100A49; /* Faixa de cima */
+  border-bottom: 25px solid #100A49; /* Faixa de baixo */
+  border-left: 15px solid #000020; /* Faixa lateral */
+  border-right: 15px solid #000020; /* Faixa lateral */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efeito de destaque original */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.main-cards .card {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilização do Título dos Cards do Menu Principal */
+.main-cards h3 {
+  font-size: 1.4em;
+  font-weight: 700; 
+  color: white; /* Texto branco */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 10px; 
+}
+
+/* --- Estilo do Botão Voltar --- */
+.back-button {
+  background-color: #100A49; /* Fundo azul escuro */
+  border: 2px solid #ffffff; /* Borda branca */
+  width: 250px; 
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 0 auto; 
+}
+
+.back-button h3 {
+  font-size: 1.1em;
+  color: #ffffff; 
+  font-weight: 500;
+  text-transform: none;
+}
+
+/* --- Estilos Específicos do Card de Etapa (Bandeiras) - MELHORADOS --- */
+.stage-card {
+  width: 180px; 
+  height: 220px; 
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  border-radius: 12px; 
+  overflow: hidden; 
+
+  /* Borda azul para o contorno */
+  border: 3px solid #100A49; 
+  background-color: #1a1a1a; /* Fundo escuro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.stage-card:hover {
+    transform: translateY(-8px); /* Efeito de destaque mais pronunciado */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8); 
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65%; 
+  padding: 15px 5px;
+  text-align: center;
+  border-bottom: 2px solid #100A49; /* Linha de separação azul */
+  
+  /* Fundo claro para o texto aparecer */
+  background-color: #f5f5f5; 
+}
+
+.card-top h4 {
+  font-size: 1.1em;
+  font-weight: 700; 
+  color: white; /* Texto escuro */
+  margin: 0;
+  line-height: 1.2;
+}
+
+.card-top p {
+  font-size: 0.95em;
+  font-weight: 500;
+  color: #100A49; /* Data em azul escuro para destaque */
+  margin: 8px 0 0 0;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35%; 
+  padding: 0;
+  background-color: #1a1a1a; /* Fundo escuro para a bandeira */
+}
+
+.flag-icon {
+  width: 90%; 
+  height: 90%;
+  object-fit: contain; 
+  border-radius: 4px; 
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  .cards-container {
+    gap: 15px;
+    padding: 20px 15px; 
+  }
+  .card, .stage-card {
+    width: 150px;
+    height: 180px;
+  }
+  .back-button {
+    width: 200px;
+  }
+  .card-top h4 {
+    font-size: 0.9em;
+  }
+}
