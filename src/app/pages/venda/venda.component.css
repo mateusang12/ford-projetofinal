@@ -1,0 +1,14 @@
+.rodapevenda {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 1000;
+    text-align: center;
+    
+}
+
+.pag {
+    padding-top: 100px;
+}

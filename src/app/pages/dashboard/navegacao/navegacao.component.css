@@ -57,8 +57,8 @@
   margin-bottom: 40px; 
   
   /* Faixas azuis escuras que dão destaque */
-  border-top: 5px solid #100A49; 
-  border-bottom: 5px solid #100A49; 
+  border-top: 5px solid #A91B0D; 
+  border-bottom: 5px solid #A91B0D; 
   
   width: 95%; 
   
@@ -141,10 +141,10 @@
   flex-direction: column; 
   
   /* Bordas DENTRO do card para criar o efeito de moldura escura/azul */
-  border-top: 25px solid #100A49; /* Faixa de cima */
-  border-bottom: 25px solid #100A49; /* Faixa de baixo */
-  border-left: 15px solid #000020; /* Faixa lateral */
-  border-right: 15px solid #000020; /* Faixa lateral */
+  border-top: 25px solid #009d71; /* Faixa de cima */
+  border-bottom: 25px solid #009d71; /* Faixa de baixo */
+  border-left: 15px solid #026842; /* Faixa lateral */
+  border-right: 15px solid #026842; /* Faixa lateral */
 }
 
 .card:hover {
@@ -217,7 +217,7 @@
   height: 65%; 
   padding: 15px 5px;
   text-align: center;
-  border-bottom: 2px solid #100A49; /* Linha de separação azul */
+  border-bottom: 2px solid #009d71; /* Linha de separação azul */
   
   /* Fundo claro para o texto aparecer */
   background-color: #f5f5f5; 
