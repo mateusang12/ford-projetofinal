@@ -18,22 +18,64 @@
     padding: 0 5%;
 }
 
+.ban-rod h1,
+.ban-rod p {
+    font-weight: bold;
+}
+
+.ban-rod span {
+    font-size: 13px;
+    
+}
+
+.redes {
+    text-align: center;
+    
+}
+
+.redes span {
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .ban-rod {
     display: flex;
     align-items: center;
     color: white;
     gap: 15px;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 50px;
     justify-content: center;
+}
+
+.imglogo {
+    max-width: 50px;
+    gap: 40px
+
+}
+
+
+.container-rodape {
+    padding-top: 40px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.rodape-bloco-esquerda {
+    padding-top: 20px;
+    gap: 20px;
 }
 
 .realizacao {
     background-color: #100A49;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
 }
+
+
 
 .container-flex {
     display: flex;

@@ -44,7 +44,7 @@ body {
     margin: 0 auto;    /* Centraliza o bloco */
     
     /* AQUI ESTÁ A CORREÇÃO: Marge superior de 30px */
-    margin-top: 100px; 
+    margin-top: 20px; 
     /* Repassando os estilos de grid para espaçamento entre os cards */
     display: grid;
     margin-left: 18%;
@@ -53,9 +53,31 @@ body {
     padding: 0 15px;
 }
 
+.newsbtn {
+    background-color: #007bff;
+    color: white;
+    max-width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.botao {
+    padding-left: 32%;
+}
+
 .estilopag {
     background-color: #e1cbee;
 
+}
+
+.destaques {
+    padding-top: 150px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #100A49;
+    font-size: 2.5rem;
 }
 
 .news-card {

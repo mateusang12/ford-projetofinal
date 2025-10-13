@@ -39,6 +39,7 @@
     color: white;
     text-decoration: none;
     padding-right: 20px;
+    font-weight: bold;
    
    
     
@@ -52,6 +53,16 @@
     white-space: normal; /* Garante que o texto quebre e não fique em uma linha só */
     line-height: 1.2; /* Ajuda na legibilidade após a quebra */
     margin: 0; /* Remove margens padrão que possam atrapalhar o alinhamento */
+}
+
+.texto-header h1,
+.texto-header p {
+    font-weight: bold;
+}
+
+.texto-header span {
+    font-size: 13px;
+    padding-top: 5px;
 }
 
 /* ---------------------------------------------------- */

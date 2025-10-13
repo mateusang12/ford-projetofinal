@@ -30,7 +30,7 @@ export class ListaNoticiasComponent {
       titulo: 'Red Bull Powertrains e Ford trabalhando em parceria',
       dataPublicacao: new Date('2025-09-03T10:00:00'),
       imagemUrl: 'fordredbull.jpg', // Segunda imagem
-      link: '/sustentabilidade',
+      link: '/ford',
       resumo: 'Recorde de capital alocado em projetos de energia solar e eólica no último trimestre, impulsionando a transição energética global.'
     },
     {

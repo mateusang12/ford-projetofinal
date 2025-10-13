@@ -6,6 +6,8 @@ import { VendaComponent } from './pages/venda/venda.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListaNoticiasComponent } from './pages/news/lista-noticias/lista-noticias.component';
+import { FordComponent } from './pages/ford/ford.component';
+import { MotorComponent } from './pages/ford/motor/motor.component';
 
 // Importe o componente para páginas não encontradas (Crie um se não tiver)
 // import { NotFoundComponent } from './pages/not-found/not-found.component'; 
@@ -32,6 +34,10 @@ export const routes: Routes = [
         path: 'noticias',
         component: NewsComponent
     },
+      {
+        path: 'ford',
+        component: FordComponent
+    },
     {
         path: 'venda',
         component: VendaComponent
@@ -47,6 +53,10 @@ export const routes: Routes = [
      {
         path: 'lista-noticias',
         component: ListaNoticiasComponent
+    },
+     {
+        path: 'motor',
+        component: MotorComponent
     },
 
     // 3. ROTA CURINGA: Captura qualquer URL que não corresponda às acima

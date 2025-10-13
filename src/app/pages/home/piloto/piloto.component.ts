@@ -23,10 +23,10 @@ export class PilotoComponent implements OnInit { // Adicionando OnInit para inic
       equipe: 'McLaren',
       nacionalidade: 'Australiana',
       idade: 24,
-      numeroCarro: 81,
-      podios2025: 15,
-      vitorias2025: 6,
-      vitoriasCarreira: 6
+      numeroCarro: 336,
+      podios2025: 14,
+      vitorias2025: 7,
+      vitoriasCarreira: 7
     },
     {
       id: 2,
@@ -39,10 +39,10 @@ export class PilotoComponent implements OnInit { // Adicionando OnInit para inic
       equipe: 'McLaren',
       nacionalidade: 'Britânica',
       idade: 25,
-      numeroCarro: 4,
-      podios2025: 12,
+      numeroCarro: 314,
+      podios2025: 14,
       vitorias2025: 5,
-      vitoriasCarreira: 8
+      vitoriasCarreira: 9
     },
     {
       id: 3,
@@ -54,11 +54,11 @@ export class PilotoComponent implements OnInit { // Adicionando OnInit para inic
       posicao: 3,
       equipe: 'Red Bull',
       nacionalidade: 'Holandesa',
-      idade: 27,
-      numeroCarro: 1,
-      podios2025: 10,
-      vitorias2025: 3,
-      vitoriasCarreira: 60
+      idade: 28,
+      numeroCarro: 273,
+      podios2025: 9,
+      vitorias2025: 4,
+      vitoriasCarreira: 61
     }
   ];
 
@@ -71,10 +71,11 @@ export class PilotoComponent implements OnInit { // Adicionando OnInit para inic
     { label: 'Equipe', key: 'equipe' },
     { label: 'Nacionalidade', key: 'nacionalidade' },
     { label: 'Idade', key: 'idade' },
-    { label: 'Pódios em 2025', key: 'podios2025' },
-    { label: 'Vitórias em 2025', key: 'vitorias2025' },
+    { label: 'Pontuação (2025)', key: 'numeroCarro' },
+    { label: 'Pódios (2025)', key: 'podios2025' },
+    { label: 'Vitórias (2025)', key: 'vitorias2025' },
     { label: 'Vitórias na Carreira', key: 'vitoriasCarreira' },
-    { label: 'Número do Carro', key: 'numeroCarro' }
+    
   ];
 
   ngOnInit(): void {

@@ -1,0 +1,90 @@
+<span class="linha-destaque linha-destaque--grande"></span>
+<div class="main-container">
+
+  <header class="header-content">
+    <h2>Comparação de Equipes</h2>
+  </header>
+
+  <div *ngIf="!mostrarComparacao" class="selection-view">
+    
+   
+
+    <div class="teams-card-grid">
+      <div 
+        *ngFor="let equipe of equipes" 
+        class="team-selection-card" 
+        [ngClass]="{'is-selected': estaSelecionada(equipe)}"
+        (click)="selecionarEquipe(equipe)"
+      >
+        <img [src]="equipe.logoUrl" [alt]="equipe.nome" class="team-card-logo"/>
+        <p class="team-card-name">{{ equipe.nome }}</p>
+      </div>
+    </div>
+
+    <div class="action-bar">
+      <button 
+        (click)="iniciarComparacao()" 
+        [disabled]="equipesSelecionadas.length !== 2"
+        class="compare-button"
+      >
+        Comparar Equipes ({{ equipesSelecionadas.length }} / 2)
+      </button>
+    </div>
+  </div>
+
+
+  <div *ngIf="mostrarComparacao && equipeA && equipeB" class="comparison-view">
+
+    <div class="comparison-actions">
+        <button (click)="voltarSelecao()" class="back-button">
+            &larr; Voltar para Seleção
+        </button>
+    </div>
+
+    <div class="comparison-box">
+      
+      <div class="comparison-header-row">
+        <div class="header-col-A team-info-header">
+          <img [src]="equipeA.logoUrl" class="comp-logo"/>
+          <h3>{{ equipeA.nome }}</h3>
+        </div>
+        <div class="header-col-label">VS</div>
+        <div class="header-col-B team-info-header">
+          <img [src]="equipeB.logoUrl" class="comp-logo"/>
+          <h3>{{ equipeB.nome }}</h3>
+        </div>
+      </div>
+
+      <div class="data-table-grid">
+        
+        <div class="data-label-col">
+            <p class="data-label">Ano de Entrada</p>
+            <p class="data-label">Motor</p>
+            <p class="data-label">Títulos de Construtores</p>
+            <p class="data-label driver-row">Pilotos</p>
+            <p class="data-label highlight-row">Posição (2025)</p>
+            <p class="data-label highlight-row">Pontuação (2025)</p>
+        </div>
+        
+        <div class="data-value-col data-value-A">
+            <p>{{ equipeA.anoEstreia }}</p>
+            <p>{{ equipeA.motor }}</p>
+            <p>{{ equipeA.titulosConstrutores }}</p>
+            <p class="driver-row">{{ equipeA.pilotos.join(' / ') }}</p>
+            <p class="highlight-row">{{ equipeA.posicao2025 }}º</p>
+            <p class="highlight-row">{{ equipeA.pontuacao2025 }} pts</p>
+        </div>
+
+        <div class="data-value-col data-value-B">
+            <p>{{ equipeB.anoEstreia }}</p>
+            <p>{{ equipeB.motor }}</p>
+            <p>{{ equipeB.titulosConstrutores }}</p>
+            <p class="driver-row">{{ equipeB.pilotos.join(' / ') }}</p>
+            <p class="highlight-row">{{ equipeB.posicao2025 }}º</p>
+            <p class="highlight-row">{{ equipeB.pontuacao2025 }} pts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
