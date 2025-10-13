@@ -1,7 +1,7 @@
 /* src/app/componentes/cabecalho/cabecalho.component.css */
 
 .banner {
-    background-color: wheat;
+    background-color:  #e1cbee;
     height: 100px; /* Isso pode ser ajustado para 'auto' se o conteúdo empilhar */
     position: absolute;
     top: 0;

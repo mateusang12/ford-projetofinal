@@ -2,18 +2,25 @@
 :host {
     display: block; 
     font-family: 'Arial', sans-serif;
-    background-color: wheat; /* Fundo suave */
+    background-color: #e1cbee; /* Fundo suave */
     padding: 20px;
 }
 
 .pagamento-container {
     max-width: 450px; 
     margin: 30px auto;
-    background: white;
+    background: #dadada;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    border-bottom: 8px solid black;
+    border-top: 8px solid black;
+    border-left: 8px solid black;
+    border-right: 8px solid black;
+    padding-bottom: 80px;
+    padding-top: 45px;
+    
 }
 
 h2 {
@@ -232,7 +239,7 @@ h3 {
 
 /* --- NOVO ESTILO PARA DESTAQUE DE LOCALIZAÇÃO --- */
 .localizacao-destaque {
-    background-color: #100A49; /* Fundo azul bem claro para destaque */
+    background-color: black; /* Fundo azul bem claro para destaque */
     color: white;           /* Cor do texto em azul escuro */
     padding: 10px 15px;
     border-radius: 6px;

@@ -1,7 +1,7 @@
 /* Estilos Gerais do Rodapé */
 .rodape-f1 {
     /* Mantenha o seu CSS de aparência */
-    background-color: wheat; 
+    background-color:  #e1cbee; 
     padding: 20px 0;
     width: 100%;
     
@@ -102,6 +102,7 @@
     /* Tenta deixar a logo branca se for preta */
     filter: brightness(0) invert(1); 
     max-width: 150px; /* Limita o tamanho máximo da logo */
+    
 }
 
 /* Responsividade (Para telas menores) */

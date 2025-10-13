@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 export interface Noticia {
   titulo: string;
@@ -12,29 +13,29 @@ export interface Noticia {
 @Component({
   selector: 'app-lista-noticias',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './lista-noticias.component.html',
   styleUrl: './lista-noticias.component.css'
 })
 export class ListaNoticiasComponent {
   public noticias: Noticia[] = [
     {
-      titulo: 'Ford fecha parceria com Red Bull',
-      dataPublicacao: new Date('2025-10-03T14:30:00'),
-      imagemUrl: 'fordredbull.jpg', // Primeira imagem
+      titulo: 'Campeonato de Construtores: McLaren é bicampeã',
+      dataPublicacao: new Date('2025-10-07T14:30:00'),
+      imagemUrl: 'https://f1grandprix.motorionline.com/wp-content/uploads/2023/09/stella-norris-piastri-mclaren-suzuka-f1-2023-1024x683.jpg', // Primeira imagem
       link: '/home',
       resumo: 'A gigante automotiva Ford anunciou uma colaboração de longo prazo com a equipe de Fórmula 1 Red Bull Racing, focando em novas tecnologias híbridas.'
     },
     {
-      titulo: 'Novos Investimentos em Energia Sustentável',
-      dataPublicacao: new Date('2025-10-02T10:00:00'),
+      titulo: 'Red Bull Powertrains e Ford trabalhando em parceria',
+      dataPublicacao: new Date('2025-09-03T10:00:00'),
       imagemUrl: 'fordredbull.jpg', // Segunda imagem
       link: '/sustentabilidade',
       resumo: 'Recorde de capital alocado em projetos de energia solar e eólica no último trimestre, impulsionando a transição energética global.'
     },
     {
-      titulo: 'Tendências do TypeScript em 2026',
-      dataPublicacao: new Date('2025-10-01T08:00:00'),
+      titulo: 'O Brasil de volta na Fórmula 1 com Bortoleto',
+      dataPublicacao: new Date('2025-08-14T08:00:00'),
       imagemUrl: 'https://imagens.ebc.com.br/SKCnxSYxHVifJqU0GkEfQgm46fQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/12/08/2024-12-08t110008z_1660654742_up1ekc80uk6of_rtrmadp_3_motor-f1-abudhabi.jpg?itok=9bQaoEMn', // Terceira imagem
       link: '/dev',
       resumo: 'Com o crescimento do Angular e React, o uso de recursos avançados do TypeScript está se tornando mandatório no mercado de desenvolvimento.'

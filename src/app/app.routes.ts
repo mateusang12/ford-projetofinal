@@ -5,6 +5,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { VendaComponent } from './pages/venda/venda.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ListaNoticiasComponent } from './pages/news/lista-noticias/lista-noticias.component';
 
 // Importe o componente para páginas não encontradas (Crie um se não tiver)
 // import { NotFoundComponent } from './pages/not-found/not-found.component'; 
@@ -42,6 +43,10 @@ export const routes: Routes = [
      {
         path: 'dashboard',
         component: DashboardComponent
+    },
+     {
+        path: 'lista-noticias',
+        component: ListaNoticiasComponent
     },
 
     // 3. ROTA CURINGA: Captura qualquer URL que não corresponda às acima
