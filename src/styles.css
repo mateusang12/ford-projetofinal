@@ -39,7 +39,6 @@ table {
 	border-spacing: 0;
 }
 
-/* Fontes para o card*/
 :root {
 	--font-montserrat: 'Montserrat', sans-serif;
 	--font-prata: 'Prata', serif;
@@ -48,8 +47,6 @@ table {
 	--font-weight-normal: 400;
 	--font-weight-bold: 700;
   } 
-  
-  /* Lista de pilotos*/
 
   .texto-titulo {
 	font-family: var(--font-prata);
@@ -86,7 +83,6 @@ table {
 	z-index: 1000;
   }
 
-  /* Este código DEVE estar no arquivo de estilos globais */
 html, body {
     margin: 0;
     padding: 0;
@@ -95,7 +91,6 @@ html, body {
     font-family: Arial, sans-serif; 
 }
 
-/* Adicione também a regra para o elemento raiz do Angular */
 app-root {
     display: block;
     height: 100%;
@@ -109,7 +104,6 @@ app-root {
 	}
 	
 	.piloto-card {
-	  /* Ajuste a largura para que o card ocupe a maior parte da tela */
 	  width: 90%;
 	}
   }

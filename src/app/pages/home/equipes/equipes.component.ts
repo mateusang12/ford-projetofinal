@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { FormsModule } from '@angular/forms';   
 
-// Interface mantida (com a URL do carro para o futuro)
 interface EquipeF1 {
   id: string;
   nome: string;
   logoUrl: string; 
-  carroUrl: string; // Manter para visual futuro
+  carroUrl: string; 
   anoEstreia: number;
   motor: string;
   titulosConstrutores: number;
@@ -28,7 +27,6 @@ interface EquipeF1 {
 })
 export class EquipesComponent implements OnInit {
 
-  // 1. Dados das 10 Equipes de F1 2025 (Exemplo)
   equipes: EquipeF1[] = [
     { id: 'mclaren', nome: 'McLaren', logoUrl: 'https://cdn.motorsport.com/images/mgl/0qXxd4E6/s1000/mclaren-mcl38.jpg', carroUrl: 'assets/mclaren-car.png', anoEstreia: 1966, motor: 'Mercedes', titulosConstrutores: 10, pilotos: ['Lando Norris', 'Oscar Piastri'], posicao2025: 1, pontuacao2025: 650 },
     { id: 'ferrari', nome: 'Ferrari', logoUrl: 'https://images.autosport.pt/2024/02/sf-24-iii-e1707824217607.jpg', carroUrl: 'assets/ferrari-car.png', anoEstreia: 1950, motor: 'Ferrari', titulosConstrutores: 16, pilotos: ['Charles Leclerc', 'Lewis Hamilton'], posicao2025: 3, pontuacao2025: 298 },
@@ -42,65 +40,49 @@ export class EquipesComponent implements OnInit {
     { id: 'sauber', nome: 'Sauber', logoUrl: 'https://www.racexpress.nl/imgitems/article/2025/02/2025_C45_Studio_Images_Stake_4_5.jpg', carroUrl: 'assets/sauber-car.png', anoEstreia: 1993, motor: 'Ferrari', titulosConstrutores: 0, pilotos: ['Gabriel Bortoleto', 'Nico Hulkenberg'], posicao2025: 8, pontuacao2025: 55 }
   ];
 
-  // 2. Variáveis de estado para a seleção e visualização
-  equipesSelecionadas: EquipeF1[] = []; // Armazena as equipes selecionadas
-  equipeA: EquipeF1 | undefined; // Equipe A para a tela de comparação
-  equipeB: EquipeF1 | undefined; // Equipe B para a tela de comparação
+  equipesSelecionadas: EquipeF1[] = [];
+  equipeA: EquipeF1 | undefined; 
+  equipeB: EquipeF1 | undefined; 
   
-  mostrarComparacao: boolean = false; // Controla qual tela é exibida (cards ou comparação)
-
+  mostrarComparacao: boolean = false;
   ngOnInit() {
-    // Não precisamos de inicialização forçada, a tela de cards começa vazia.
+    
   }
 
-  /**
-   * 3. Lógica de seleção do Card
-   */
   selecionarEquipe(equipe: EquipeF1): void {
     const index = this.equipesSelecionadas.findIndex(e => e.id === equipe.id);
 
     if (index > -1) {
-      // Já está selecionado: Desseleciona (remove da lista)
+     
       this.equipesSelecionadas.splice(index, 1);
     } else {
-      // Não está selecionado:
+  
       if (this.equipesSelecionadas.length < 2) {
-        // Seleciona, se ainda houver espaço
+        
         this.equipesSelecionadas.push(equipe);
       } else {
-        // Limite atingido: Alerta e ignora
+   
         alert('Você já selecionou duas equipes. Clique no botão "Comparar Equipes" ou desmarque uma equipe.');
       }
     }
   }
 
-  /**
-   * 4. Lógica de Comparação (acionada pelo botão)
-   */
   iniciarComparacao(): void {
     if (this.equipesSelecionadas.length !== 2) {
       alert('Por favor, selecione exatamente duas equipes para comparar.');
       return;
     }
 
-    // Define as equipes A e B e muda a visualização
     this.equipeA = this.equipesSelecionadas[0];
     this.equipeB = this.equipesSelecionadas[1];
     this.mostrarComparacao = true;
   }
 
-  /**
-   * 5. Voltar para a Seleção de Cards
-   */
   voltarSelecao(): void {
     this.mostrarComparacao = false;
-    // Opcional: Manter a seleção para o usuário
-    // this.equipesSelecionadas = []; // Para limpar tudo, use esta linha
-  }
   
-  /**
-   * 6. Função auxiliar para o HTML (check de seleção)
-   */
+  }
+
   estaSelecionada(equipe: EquipeF1): boolean {
     return this.equipesSelecionadas.some(e => e.id === equipe.id);
   }

@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { RodapeComponent } from "../home/rodape/rodape.component";
 import { SetoresComponent } from "./setores/setores.component";
-import { CabecalhoingComponent } from "./cabecalhoing/cabecalhoing.component";
+import { RodapedashboardComponent } from '../dashboard/rodapedashboard/rodapedashboard.component';
+import { CabecalhoingComponent } from './cabecalhoing/cabecalhoing.component';
 
 @Component({
   selector: 'app-ingressos',
-  imports: [RodapeComponent, SetoresComponent, CabecalhoingComponent],
+  imports: [ 
+    SetoresComponent, 
+RodapedashboardComponent,
+CabecalhoingComponent
+],
   templateUrl: './ingressos.component.html',
   styleUrl: './ingressos.component.css'
 })

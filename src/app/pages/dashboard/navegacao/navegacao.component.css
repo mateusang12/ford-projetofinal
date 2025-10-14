@@ -1,9 +1,7 @@
-/* Classes de controle */
 .hidden {
   display: none !important;
 }
 
-/* 1. Container Principal (Fundo Preto da Viewport) */
 .main-content {
   flex-grow: 1; 
   display: flex;
@@ -15,7 +13,6 @@
   position: relative; 
 }
 
-/* Linha de separação sutil abaixo do cabeçalho */
 .main-content::before {
     content: "";
     position: absolute; 
@@ -26,8 +23,6 @@
     background-color: rgba(255, 255, 255, 0.2); 
 }
 
-
-/* 2. Background-Image (Faixa Central - Bloco Preto Maior) */
 .background-image {
   background-image: none;
   background-color: black; 
@@ -50,19 +45,16 @@
   border: none;
 }
 
-/* 3. Estilos dos Cards Containers (Pai dos menus e etapas) */
+
 .cards-container {
-  /* Margem vertical para criar o espaço vazio preto dentro do .background-image */
   margin-top: 40px; 
   margin-bottom: 40px; 
-  
-  /* Faixas azuis escuras que dão destaque */
+
   border-top: 5px solid #A91B0D; 
   border-bottom: 5px solid #A91B0D; 
   
   width: 95%; 
-  
-  /* Padding interno */
+ 
   padding: 30px 30px; 
   
   display: flex;
@@ -76,22 +68,16 @@
 
 .stages-title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white; /* Cor branca para contraste com o fundo escuro */
+    color: white; 
     font-size: 1.8em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 25px; /* Espaço entre o título e os cards */
-    text-align: center; /* Centraliza o texto */
+    margin-bottom: 25px; 
+    text-align: center;
     width: 100%;
 }
 
-/* --- Linhas Divisórias (Mantidas da Interação Anterior) --- */
-
-/* O restante do seu CSS (stages-wrapper, card-top, etc.) deve vir aqui. 
-   Certifique-se que o .stages-wrapper comece a partir da margem abaixo deste título. */
-
-/* Exemplo (para referência) de como seu .stages-wrapper deve estar: */
 .stages-wrapper {
     display: flex; 
     flex-wrap: wrap;
@@ -116,20 +102,17 @@
 .stages-wrapper::before {
     content: "";
     position: absolute;
-    top: 50%; /* Centraliza verticalmente */
+    top: 50%;
     left: 5%; 
     right: 5%; 
-    height: 2px; /* Espessura da faixa */
-    background-color: #100A49; /* Cor azul escuro */
-    z-index: 0; /* Fica atrás dos cards */
-    transform: translateY(-50%); /* Ajuste fino de centralização */
+    height: 2px; 
+    z-index: 0; 
+    transform: translateY(-50%); 
 }
 
 
-
-/* --- 4. Estilos Comuns de Card (MENU PRINCIPAL - REVERTIDO PARA O SEU ESTILO ORIGINAL) --- */
 .card {
-  background-color: black; /* Fundo preto */
+  background-color: black; 
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -139,16 +122,15 @@
   overflow: hidden;
   display: flex;
   flex-direction: column; 
-  
-  /* Bordas DENTRO do card para criar o efeito de moldura escura/azul */
-  border-top: 25px solid #009d71; /* Faixa de cima */
-  border-bottom: 25px solid #009d71; /* Faixa de baixo */
-  border-left: 15px solid #026842; /* Faixa lateral */
-  border-right: 15px solid #026842; /* Faixa lateral */
+ 
+  border-top: 25px solid #009d71;
+  border-bottom: 25px solid #009d71;
+  border-left: 15px solid #026842; 
+  border-right: 15px solid #026842;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Efeito de destaque original */
+  transform: translateY(-5px); 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -157,11 +139,10 @@
   align-items: center;
 }
 
-/* Estilização do Título dos Cards do Menu Principal */
 .main-cards h3 {
   font-size: 1.4em;
   font-weight: 700; 
-  color: white; /* Texto branco */
+  color: white; 
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: center;
@@ -169,10 +150,9 @@
   padding: 0 10px; 
 }
 
-/* --- Estilo do Botão Voltar --- */
 .back-button {
-  background-color: #100A49; /* Fundo azul escuro */
-  border: 2px solid #ffffff; /* Borda branca */
+  background-color: #100A49; 
+  border: 2px solid #ffffff; 
   width: 250px; 
   height: 50px; 
   display: flex;
@@ -188,7 +168,6 @@
   text-transform: none;
 }
 
-/* --- Estilos Específicos do Card de Etapa (Bandeiras) - MELHORADOS --- */
 .stage-card {
   width: 180px; 
   height: 220px; 
@@ -198,14 +177,13 @@
   border-radius: 12px; 
   overflow: hidden; 
 
-  /* Borda azul para o contorno */
   border: 3px solid #100A49; 
-  background-color: #1a1a1a; /* Fundo escuro */
+  background-color: #1a1a1a; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .stage-card:hover {
-    transform: translateY(-8px); /* Efeito de destaque mais pronunciado */
+    transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8); 
 }
 
@@ -217,16 +195,15 @@
   height: 65%; 
   padding: 15px 5px;
   text-align: center;
-  border-bottom: 2px solid #009d71; /* Linha de separação azul */
-  
-  /* Fundo claro para o texto aparecer */
+  border-bottom: 2px solid #009d71; 
+
   background-color: #f5f5f5; 
 }
 
 .card-top h4 {
   font-size: 1.1em;
   font-weight: 700; 
-  color: white; /* Texto escuro */
+  color: white;
   margin: 0;
   line-height: 1.2;
 }
@@ -234,7 +211,7 @@
 .card-top p {
   font-size: 0.95em;
   font-weight: 500;
-  color: #100A49; /* Data em azul escuro para destaque */
+  color: #100A49; 
   margin: 8px 0 0 0;
 }
 
@@ -244,7 +221,7 @@
   align-items: center;
   height: 35%; 
   padding: 0;
-  background-color: #1a1a1a; /* Fundo escuro para a bandeira */
+  background-color: #1a1a1a; 
 }
 
 .flag-icon {
@@ -254,7 +231,6 @@
   border-radius: 4px; 
 }
 
-/* Responsividade básica */
 @media (max-width: 768px) {
   .cards-container {
     gap: 15px;

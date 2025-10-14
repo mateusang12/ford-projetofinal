@@ -4,22 +4,19 @@
   color: black;
 }
 
-/* Variáveis de Cores (Tema F1 Dark) */
 :root {
   --fundo-principal: #1A1A1E; 
   --fundo-card: #2A2A2A;     
-  --acento-primario: #E10600; /* Vermelho F1 */
-  --acento-secundario: #FFC300; /* Dourado */
+  --acento-primario: #E10600;
+  --acento-secundario: #FFC300;
   --texto-claro: black;
   --borda-clara: #444;
   --borda-destaque: #666;
 
-  /* Assumindo que você definiu essas fontes globalmente */
   --font-montserrat: 'Montserrat', sans-serif; 
   --font-weight-bold: 700;
 }
 
-/* 1. Container Geral */
 .main-container {
   max-width: 860px;
   margin: 20px auto;
@@ -48,10 +45,6 @@
 .header-content h2 { color: var(--acento-secundario); font-size: 1.4em; margin: 5px 0 0 0; }
 
 
-/* ============================================== */
-/* 2. TELA DE SELEÇÃO DE CARDS (SELECTION-VIEW) */
-/* ============================================== */
-
 .selection-view {
     padding-bottom: 30px;
     background-color: #e1cbee;
@@ -67,10 +60,9 @@
     color: var(--acento-secundario);
 }
 
-/* CORREÇÃO: Grid 5x5 para as equipes */
 .teams-card-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* FORÇA 5 COLUNAS IGUAIS */
+    grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     margin-bottom: 30px;
     max-width: 1000px; 
@@ -124,12 +116,11 @@
     text-align: center;
 }
 
-/* CORREÇÃO: Visibilidade e Estilo do Botão de Ação */
 .action-bar {
     text-align: center;
-    padding: 20px 0 40px 0; /* Espaço para o botão respirar */
+    padding: 20px 0 40px 0; 
     position: relative; 
-    z-index: 10; /* Garante que o container esteja na frente */
+    z-index: 10; 
 }
 
 .compare-button {
@@ -142,7 +133,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s, opacity 0.3s, transform 0.1s;
-    z-index: 15; /* Garante que o botão esteja acima de outros elementos */
+    z-index: 15; 
 }
 
 .compare-button:hover:not(:disabled) {
@@ -155,11 +146,6 @@
     opacity: 0.7;
     cursor: not-allowed;
 }
-
-
-/* ============================================== */
-/* 3. TELA DE COMPARAÇÃO (COMPARISON-VIEW) */
-/* ============================================== */
 
 .comparison-view {
     padding-bottom: 30px;
@@ -190,7 +176,6 @@
     overflow: hidden;
 }
 
-/* Cabeçalho da Comparação */
 .comparison-header-row {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr; 
@@ -228,10 +213,9 @@
     color: var(--acento-primario);
 }
 
-/* Tabela de Dados (3 colunas) */
 .data-table-grid {
     display: grid;
-    grid-template-columns: 1.5fr 2fr 2fr; /* Rótulo | Valor A | Valor B */
+    grid-template-columns: 1.5fr 2fr 2fr; 
     font-size: 1.1em;
 }
 
@@ -258,7 +242,6 @@
 .data-value-A p { text-align: right; border-right: 1px solid #444; }
 .data-value-B p { text-align: left; }
 
-/* Destaques */
 .driver-row {
     font-style: italic;
     font-size: 0.9em;
@@ -271,16 +254,15 @@
     border-top: 2px solid #444;
 }
 
-/* Responsividade */
 @media (max-width: 992px) {
     .teams-card-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 colunas em tablets */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
 
 @media (max-width: 768px) {
     .teams-card-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas em mobile */
+        grid-template-columns: repeat(3, 1fr);
         max-width: none;
         padding: 0 10px;
     }
@@ -288,7 +270,6 @@
         height: 120px;
     }
 
-    /* Comparação em Mobile */
     .comparison-header-row {
         grid-template-columns: 1fr 1fr; 
         padding: 10px 0;
@@ -296,12 +277,12 @@
     .header-col-label { display: none; }
     
     .data-table-grid {
-        grid-template-columns: 1fr 1fr; /* Rótulo | Valor A/B */
+        grid-template-columns: 1fr 1fr;
         font-size: 1em;
     }
 
     .data-value-col {
-        display: contents; /* Força os elementos a se aninharem */
+        display: contents;
     }
     
     .data-value-A p, .data-value-B p {

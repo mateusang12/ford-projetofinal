@@ -1,18 +1,15 @@
-/* Estilo da página */
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6; /* cinza claro */
+    background-color: #f3f4f6;
 }
 
-/* CSS principal para garantir a proporção 16:9 
-   e que o vídeo preencha o contêiner (Formato Paisagem).
-*/
 .video-container {
     position: relative; 
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (56.25% de 16/9) */
+    padding-bottom: 56.25%; 
     height: 0; 
     overflow: hidden; 
-    border-radius: 0.75rem; /* Cantos arredondados */
+    border-radius: 0.75rem;
 }
 
 .video-container iframe {

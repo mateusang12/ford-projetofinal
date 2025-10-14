@@ -27,7 +27,7 @@ export class CarrosselComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Limpa o intervalo quando o componente é destruído
+    
     if (this.intervalo) {
       clearInterval(this.intervalo);
     }
@@ -36,7 +36,7 @@ export class CarrosselComponent implements OnInit, OnDestroy {
   iniciarCarrossel() {
     this.intervalo = setInterval(() => {
       this.indexAtual = (this.indexAtual + 1) % this.imagens.length;
-    }, 2000); // 2000 ms = 2 segundos
+    }, 2000);
   }
 
 }

@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
-// >>> 1. IMPORTAR AQUI: 
+
 import { ReactiveFormsModule } from '@angular/forms'; 
 
-// Importe seus componentes de Login e Home
+
 import { LoginComponent } from './pages/login/login.component'; 
 import { HomeComponent } from './pages/home/home.component';
 
@@ -17,8 +17,7 @@ import { HomeComponent } from './pages/home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
-    // >>> 2. ADICIONAR AQUI:  
+    BrowserModule,  
     ReactiveFormsModule 
   ],
   providers: [],

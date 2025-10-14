@@ -2,25 +2,30 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding-top: 200px;
+    padding-top: 50px;
     
 }
 
-/* Variáveis de Cores (Exemplos) */
+.t1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
+}
+
 :root {
-    --color-text: white;     /* Texto Branco para todos */
+    --color-text: white; 
     
-    /* Novas Cores */
-    --color-a: #cc0000;    /* Vermelho (Padrão Arquibancada) */
-    --color-b: #008000;    /* Verde */
-    --color-d: #0000cc;    /* Azul */
-    --color-g: #ff9900;    /* Laranja/Âmbar */
+
+    --color-a: #cc0000;    
+    --color-b: #008000;    
+    --color-d: #0000cc;    
+    --color-g: #ff9900;    
     --color-h: ##ff9900;
 }
 
-/* O estilo base do card (cor do texto, padding, sombra) permanece no .setor-item */
 .setor-item {
-    color: var(--color-text); /* Texto Branco */
+    color: var(--color-text);
     padding: 18px 25px;
     border-radius: 8px;
     cursor: pointer;
@@ -32,25 +37,21 @@
     line-height: 1.5;
 }
 
-/* 1. Cor Específica para o Setor A (exemplo: Vermelho) */
 .setor-item.cor-a {
     background-color: #b87400;
     color: white;
 }
 
-/* 2. Cor Específica para o Setor B (exemplo: Verde) */
 .setor-item.cor-b {
     background-color: #b87400;
     color: white;
 }
 
-/* 3. Cor Específica para o Setor D (exemplo: Azul) */
 .setor-item.cor-d {
     background-color: #b87400;
     color: white;
 }
 
-/* 4. Cor Específica para o Setor G (exemplo: Âmbar/Laranja Escuro) */
 .setor-item.cor-g {
     background-color: #b87400;
     color: white;
@@ -105,8 +106,7 @@
     background-color: #2271B3;
     color: white;
 }
-/* ... o restante do CSS (setores-lista, setor-detalhes, buy-button, etc.) permanece inalterado ... */
-/* Apenas ajuste o wrapper para o CSS anterior que você estava usando para não ter problemas: */
+
 .setores-wrapper {
     max-width: 800px; 
     margin: 20px auto;
@@ -126,11 +126,9 @@
         grid-template-columns: repeat(2, 1fr); 
     }
 }
-/* ... resto do CSS de layout e detalhes ... */
 
-/* Estilo do Card */
 .setor-item {
-    color: var(--color-text); /* Texto Branco */
+    color: var(--color-text); 
     padding: 18px 25px;
     border-radius: 8px;
     cursor: pointer;
@@ -155,7 +153,6 @@
     align-items: center;
 }
 
-/* Estilo da Seta (Fechado) */
 .arrow-icon::before {
     content: '▶'; 
     font-size: 0.9em;
@@ -164,18 +161,15 @@
     color: var(--color-text);
 }
 
-/* Seta no estado ativo (Aberto) */
 .setor-item.active .arrow-icon::before {
     content: '▼'; 
 }
 
-/* Área de Conteúdo Expandido */
 .setor-detalhes {
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.4); 
     
-    /* Inicia Escondido */
     max-height: 0; 
     opacity: 0;    
     transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in;
@@ -187,13 +181,11 @@
     line-height: 1.5;
 }
 
-/* Estado Ativo: Expande o conteúdo */
 .setor-item.active .setor-detalhes {
     max-height: 300px; 
     opacity: 1;      
 }
 
-/* Estilo do Botão "Comprar Ingressos" */
 .buy-button {
     background-color: white;
     color: #333; 

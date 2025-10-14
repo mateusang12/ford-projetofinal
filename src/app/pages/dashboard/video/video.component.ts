@@ -9,8 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./video.component.css']
 })
 export class VideoComponent {
-  // 🎥 Vídeo de destaques da Fórmula 1 (sem autoplay)
-  videoUrl: string = 'https://www.youtube.com/embed/xkRXnrvFCY0'; // sem autoplay nem mute
-
+  
+  videoUrl: string = 'https://www.youtube.com/embed/xkRXnrvFCY0';
   constructor() {}
 }

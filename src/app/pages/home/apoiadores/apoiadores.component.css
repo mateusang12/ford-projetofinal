@@ -1,21 +1,19 @@
-/* src/app/componentes/apoiadores/apoiadores.component.css */
-
 .apoiadores-container {
-  background-color: #000; /* Fundo preto */
-  padding: 40px 20px; /* Espaçamento interno */
+  background-color: #000;
+  padding: 40px 20px;
   width: 100%;
-  text-align: center; /* Centraliza o texto (como o h2) dentro do container */
+  text-align: center;
 }
 
 .titulo-apoiadores {
-  color: wheat; /* Cor do texto branco */
+  color: wheat; 
   font-family: var(--font-sanserif);
-  font-size: 2em; /* Tamanho da fonte, ajuste se precisar */
+  font-size: 2em; 
   margin-left: 0;
   margin-right: 0;
   text-align: center;
   width: 100%;
-  margin-bottom: 30px; /* Espaçamento abaixo do título e acima das imagens */
+  margin-bottom: 30px; 
 }
 
 .apoiadores-imagens {
@@ -32,30 +30,28 @@
 }
 
 .ford-container {
-  display: flex; /* Habilita o flexbox */
-  flex-direction: column; /* Alinha os itens verticalmente (em coluna) */
-  align-items: center; /* Centraliza os itens na horizontal */
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .logo-ford {
-  /* Ajuste o tamanho da logo se precisar */
   height: 50px; 
 }
 
 .ford-texto {
-  /* Estilos para o texto "Philanthropy" */
-  color: #fff; /* ou a cor que você precisar */
+  color: #fff;
   font-family: Arial, sans-serif;
   font-size: 1.2em;
-  margin: 0; /* Remove a margem padrão do parágrafo */
+  margin: 0; 
   
 }
 
 .rede-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centraliza horizontalmente */
-  gap: 0px; /* Adiciona espaço entre as imagens e o texto */
+  justify-content: center; 
+  gap: 0px; 
   color: white;
   gap: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -68,36 +64,30 @@
   max-width: 130px;
 }
 
-/* --- Media Query para Telas Pequenas (Celular) --- */
-
 @media (max-width: 600px) {
   
   .apoiadores-container {
-      padding: 30px 2%; /* Reduz um pouco o padding em telas pequenas */
+      padding: 30px 2%; 
       position: relative;
       top: 70%;
     }
 
   .apoiadores-imagens {
-    /* 1. Reduzir o espaçamento para caber mais na tela */
+ 
     gap: 10px;
     justify-content: space-around; 
-    
-    /* 2. Permite que as logos quebrem para a próxima linha */
-    /* Isso é crucial se você tiver 4 ou mais logos */
     flex-wrap: wrap; 
   }
 
   .apoiadores-imagens > * {
-    /* Garante que o contêiner de cada apoiador não ocupe muito espaço */
+  
     max-width: 30%; 
   }
 
   .apoiadores-imagens img, 
   .logosenai {
-    /* 3. Reduz o tamanho das logos */
     height: 40px; 
-    max-width: 100%; /* Garante que a imagem se ajuste ao seu contêiner pai */
+    max-width: 100%;
   }
 }
 

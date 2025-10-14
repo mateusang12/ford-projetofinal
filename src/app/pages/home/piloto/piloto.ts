@@ -1,13 +1,13 @@
 export interface Piloto {
-    titulo: string; // Vai ser o nome do piloto
-    autoria: string; // Vai ser o nome da equipe
-    colocacao: string; // Pode ser removido se não for mais usado
+    titulo: string; 
+    autoria: string; 
+    colocacao: string; 
     imagem: string;
   
-    // NOVAS PROPRIEDADES PARA COMPARAÇÃO
-    id: number; // Chave única para seleção
+
+    id: number;
     posicao: number;
-    equipe: string; // Duplicado de 'autoria', mas mantido para clareza na comparação
+    equipe: string; 
     nacionalidade: string;
     idade: number;
     numeroCarro: number;

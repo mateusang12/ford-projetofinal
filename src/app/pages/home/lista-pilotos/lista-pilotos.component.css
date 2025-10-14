@@ -22,17 +22,16 @@
 
   .container-pilotos {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards de pilotos se quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os cards quando houver espaço */
-    gap: 20px; /* Adiciona um espaço entre os cards */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
   }
 
-  /* src/app/componentes/lista-pilotos/lista-pilotos.component.css */
 
 .piloto-card {
-  /* ... outros estilos ... */
+ 
   position: relative;
-  z-index: 1; /* Defina uma camada menor para os cards de pilotos */
+  z-index: 1; 
 }
 
 @media (max-width: 600px) {

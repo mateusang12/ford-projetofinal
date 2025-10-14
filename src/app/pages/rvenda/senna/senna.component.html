@@ -1,0 +1,121 @@
+<div class="pagamento-container">
+    
+    <section [hidden]="!compraConcluida" class="card-sucesso">
+        <h3>Concluído com Sucesso!</h3>
+        <p>Os ingressos foram enviados para o seu e-mail.</p>
+        <p>Agradecemos sua compra.</p>
+        <button class="btn-principal" (click)="voltarParaIngressos()">
+            Comprar Mais Ingressos
+        </button>
+    </section>
+
+    <section [hidden]="compraConcluida">
+
+        <header [hidden]="passoAtual !== 'pagamento'" class="fluxo-header">
+            <button class="btn-voltar" (click)="voltarParaIngressos()">
+                &larr; Voltar para Ingressos
+            </button>
+        </header>
+
+        <div [hidden]="passoAtual !== 'ingressos'" class="ingressos-seletor">
+            <h2>Selecione seus Ingressos</h2>
+
+            <div class="localizacao-destaque">
+                Localização: Setor R
+            </div>
+            
+            <div class="ingresso-list">
+                <div class="ingresso-row">
+                    <div class="ingresso-info">
+                        <span class="nome-tipo">Inteira</span>
+                        <span class="valor-tipo">{{ formatarValor(PRECO_INTEIRA) }}</span>
+                    </div>
+                    <div class="ingresso-contador">
+                        <button (click)="mudarQuantidade('inteira', -1)" [disabled]="quantidadeInteira === 0">-</button>
+                        <span class="quantidade-valor">{{ quantidadeInteira }}</span>
+                        <button (click)="mudarQuantidade('inteira', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="ingresso-row">
+                    <div class="ingresso-info">
+                        <span class="nome-tipo">Meia Entrada</span>
+                        <span class="valor-tipo">{{ formatarValor(PRECO_MEIA) }}</span>
+                    </div>
+                    <div class="ingresso-contador">
+                        <button (click)="mudarQuantidade('meia', -1)" [disabled]="quantidadeMeia === 0">-</button>
+                        <span class="quantidade-valor">{{ quantidadeMeia }}</span>
+                        <button (click)="mudarQuantidade('meia', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-summary">
+                <strong class="total-label">Total a Pagar:</strong>
+                <strong class="total-value">{{ formatarValor(total) }}</strong>
+            </div>
+
+            <button 
+                class="btn-avancar btn-principal" 
+                (click)="avancarParaPagamento()" 
+                [disabled]="total === 0">
+                Avançar para Pagamento ({{ formatarValor(total) }})
+            </button>
+        </div>
+
+        <div [hidden]="passoAtual !== 'pagamento'" class="pagamento-seletor">
+            <h2>Selecione a Forma de Pagamento</h2>
+
+            <div class="total-summary resumo-total">
+                <span class="total-label">Total da Compra:</span>
+                <span class="total-value">{{ formatarValor(total) }}</span>
+            </div>
+
+            <div class="opcoes-pagamento">
+                <div 
+                    class="opcao-box" 
+                    (click)="selecionarPagamento('pix')" 
+                    [class.selecionado]="formaPagamentoSelecionada === 'pix'">
+                    Pix
+                </div>
+                <div 
+                    class="opcao-box" 
+                    (click)="selecionarPagamento('boleto')" 
+                    [class.selecionado]="formaPagamentoSelecionada === 'boleto'">
+                    Boleto
+                </div>
+                <div 
+                    class="opcao-box" 
+                    (click)="selecionarPagamento('cartao')" 
+                    [class.selecionado]="formaPagamentoSelecionada === 'cartao'">
+                    Cartão de Crédito
+                </div>
+            </div>
+
+            <div class="form-cartao" [style.display]="exibirFormularioCartao ? 'grid' : 'none'">
+                <h3>Dados do Cartão</h3>
+                
+                <div [hidden]="!mensagemErroCartao" class="mensagem-erro">{{ mensagemErroCartao }}</div>
+                
+                <input type="text" placeholder="Número do Cartão (16 dígitos)" maxlength="16" required #numero>
+                <input type="text" placeholder="Nome Impresso no Cartão" required #nome>
+                <div class="campos-duplos">
+                    <input type="text" placeholder="Validade (MM/AA)" maxlength="5" required #validade>
+                    <input type="text" placeholder="CVV" maxlength="4" required #cvv>
+                </div>
+            </div>
+
+            <button 
+                class="btn-principal btn-finalizar"
+                [disabled]="!verificarBotaoFinalizar()"
+                (click)="finalizarCompra(
+                    numero?.value || '', 
+                    nome?.value || '', 
+                    validade?.value || '', 
+                    cvv?.value || ''
+                )">
+                Finalizar Compra
+            </button>
+        </div>
+    </section>
+</div>

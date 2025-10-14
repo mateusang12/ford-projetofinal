@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CabecalhoVendaComponent } from "./cabecalho-venda/cabecalho-venda.component";
+
 import { PagamentoComponent } from './pagamento/pagamento.component';
-import { RodapepagComponent } from './rodapepag/rodapepag.component';
+import { RodapedashboardComponent } from '../dashboard/rodapedashboard/rodapedashboard.component';
+import { CabecalhoingComponent } from '../ingressos/cabecalhoing/cabecalhoing.component';
 
 @Component({
   selector: 'app-venda',
   imports: [
     RouterModule,
-    CabecalhoVendaComponent,
-    RodapepagComponent,
-    PagamentoComponent
+    PagamentoComponent,
+    RodapedashboardComponent,
+    CabecalhoingComponent
 ],
   templateUrl: './venda.component.html',
   styleUrl: './venda.component.css'

@@ -27,40 +27,33 @@
 }
 
 .autoria {
-    display: block; /* Garante que o span se comporte como um bloco para que o text-align funcione */
-    text-align: right; /* <--- ALINHA O TEXTO À DIREITA */
-    margin-top: 30px; /* Adiciona um bom espaçamento antes da autoria */
-    font-style: italic; /* Opcional: Estilo itálico para autoria */
+    display: block; 
+    text-align: right; 
+    margin-top: 30px; 
+    font-style: italic; 
     padding-bottom: 20px;
     padding-right: 30px;
 }
-/* Defina o contêiner 'p1' como um Flex Container */
+
 .p1 {
-    display: flex; /* Habilita o Flexbox */
-    gap: 20px; /* Adiciona um espaço entre a imagem e o parágrafo (opcional, mas recomendado) */
-    align-items: flex-start; /* Alinha os itens ao topo do contêiner (opcional) */
-    /* Talvez você queira definir uma largura máxima para 'p1' também,
-       dependendo do design da sua página. */
+    display: flex; 
+    gap: 20px; 
+    align-items: flex-start; 
+     
 }
 
-/* Opcional: Ajuste o tamanho máximo da imagem */
 .p1 img {
-    max-width: 50%; /* Por exemplo, a imagem ocupa 40% da largura do contêiner 'p1' */
+    max-width: 50%;
     height: auto;
     height: 310px;
 }
 
-/* Opcional: O parágrafo ocupará o espaço restante */
 .p1 p {
     
-    text-align: justify; /* Esta linha justifica o texto */
-    
-    /* Mantenha quaisquer outros estilos (fonte, cor, margem) aqui */
-    /* Por exemplo: */
+    text-align: justify; 
     line-height: 1.6;
     margin: 0;
     padding-right: 3%;
 
-    flex-grow: 1; /* Permite que o parágrafo cresça para preencher o espaço restante */
-    /* Adicione quaisquer estilos de fonte e margem que você precisar aqui */
+    flex-grow: 1; 
 }

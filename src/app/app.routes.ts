@@ -8,20 +8,20 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListaNoticiasComponent } from './pages/news/lista-noticias/lista-noticias.component';
 import { FordComponent } from './pages/ford/ford.component';
 import { MotorComponent } from './pages/ford/motor/motor.component';
+import { RvendaComponent } from './pages/rvenda/rvenda.component';
 
-// Importe o componente para páginas não encontradas (Crie um se não tiver)
-// import { NotFoundComponent } from './pages/not-found/not-found.component'; 
+ 
 
 
 export const routes: Routes = [
-    // 1. ROTA PADRÃO: Redireciona a URL raiz para a página de Login
+
     {
         path: '',
         redirectTo: '/home',
-        pathMatch: 'full' // Garante que apenas a URL completa seja redirecionada
+        pathMatch: 'full' 
     },
     
-    // 2. ROTAS PRINCIPAIS
+
     {
         path: 'home',
         component: HomeComponent
@@ -58,13 +58,9 @@ export const routes: Routes = [
         path: 'motor',
         component: MotorComponent
     },
+     {
+        path: 'rvenda',
+        component: RvendaComponent
+    },
 
-    // 3. ROTA CURINGA: Captura qualquer URL que não corresponda às acima
-    // Geralmente redireciona para uma página de erro 404
-    /*
-    { 
-        path: '**', 
-        component: NotFoundComponent 
-    }
-    */
 ];
